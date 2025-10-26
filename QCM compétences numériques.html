@@ -1,0 +1,3646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>QCM Compétences numériques</title>
+
+<style>
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f5f5f5; 
+    margin: 20px; 
+    text-align: center; 
+    color: #333; /* texte sombre par défaut */
+}
+
+button { 
+    padding: 10px 15px; 
+    margin: 5px; 
+    border-radius: 8px; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+    color: #fff; 
+    background-color: #555;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.theme-buttons {
+    margin-bottom: 30px;
+}
+
+#qcmForm { 
+    width: 700px; 
+    margin: 20px auto; 
+    display: none; 
+    text-align: left; 
+}
+
+.question-card { 
+    background-color: #ffffff; 
+    padding: 15px 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    color: #333;
+}
+
+.question-card p { 
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+
+.options label { 
+    display: block; 
+    padding: 8px 12px; 
+    margin-bottom: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.options label:hover { 
+    background-color: #dcefff; 
+}
+
+.correction { 
+    text-align: center; 
+    margin-top: 5px; 
+    font-weight: bold; 
+    font-size: 1em; 
+}
+
+.correct { 
+    background-color: #c8f7c5 !important;
+    font-weight: bold;
+}
+
+.incorrect { 
+    background-color: #f7c5c5 !important;
+}
+
+.theme { 
+    display: none; 
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 10px; 
+    border-radius: 10px; 
+    color: #fff; 
+}
+
+.theme1 { background-color: #f8b195; }
+.theme2 { background-color: #f67280; }
+.theme3 { background-color: #c06c84; }
+.theme4 { background-color: #6c5b7b; }
+.theme5 { background-color: #355c7d; }
+.theme6 { background-color: #99b898; }
+.theme7 { background-color: #feceab; color: #333; }
+.theme8 { background-color: #2a363b; }
+</style>
+</head>
+
+<body>
+
+<h1>QCM Compétences numériques</h1>
+
+<div class="theme-buttons">
+    <button onclick="showTheme(1)">Thème 1</button>
+    <button onclick="showTheme(2)">Thème 2</button>
+    <button onclick="showTheme(3)">Thème 3</button>
+    <button onclick="showTheme(4)">Thème 4</button>
+    <button onclick="showTheme(5)">Thème 5</button>
+    <button onclick="showTheme(6)">Thème 6</button>
+    <button onclick="showTheme(7)">Thème 7</button>
+    <button onclick="showTheme(8)">Tous les thèmes</button>
+</div>
+
+
+<form id="qcmForm">
+
+<div class="theme theme1">
+    <h2>Thème 1 : Sécurité informatique</h2>
+
+    <!-- Question 1 -->
+    <div class="question-card">
+        <p>1. Quelle est la première protection d’accès aux données selon le cours ?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="0"> A. Le cryptage</label>
+            <label><input type="radio" name="q1" value="0"> B. Le firewall</label>
+            <label><input type="radio" name="q1" value="1"> C. Le mot de passe</label>
+            <label><input type="radio" name="q1" value="0"> D. La signature numérique</label>
+        </div>
+        <p id="q1_result" class="correction"></p>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card">
+        <p>2. Un bon mot de passe doit :</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="0"> A. Être court</label>
+            <label><input type="radio" name="q2" value="0"> B. Contenir uniquement des lettres</label>
+            <label><input type="radio" name="q2" value="1"> C. Être long et complexe</label>
+            <label><input type="radio" name="q2" value="0"> D. Être identique pour tous les comptes</label>
+        </div>
+        <p id="q2_result" class="correction"></p>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card">
+        <p>3. Quelle menace utilise des faux sites ou emails pour voler des informations ?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="0"> A. Ransomware</label>
+            <label><input type="radio" name="q3" value="0"> B. Spyware</label>
+            <label><input type="radio" name="q3" value="1"> C. Phishing</label>
+            <label><input type="radio" name="q3" value="0"> D. Worm</label>
+        </div>
+        <p id="q3_result" class="correction"></p>
+    </div>
+
+<!-- Question 4 -->
+<div class="question-card">
+    <p>4. L’authentification à deux facteurs ajoute à l’identifiant/mot de passe :</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="0"> A. Une image de sécurité</label>
+        <label><input type="radio" name="q4" value="0"> B. Une deuxième adresse e-mail</label>
+        <label><input type="radio" name="q4" value="1"> C. Un code envoyé ou une biométrie</label>
+        <label><input type="radio" name="q4" value="0"> D. Une signature manuscrite</label>
+    </div>
+    <p id="q4_result" class="correction"></p>
+</div>
+
+<!-- Question 5 -->
+<div class="question-card">
+    <p>5. Le mot de passe « 123456 » est un exemple de :</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="0"> A. Bon mot de passe</label>
+        <label><input type="radio" name="q5" value="0"> B. Mot de passe fort</label>
+        <label><input type="radio" name="q5" value="1"> C. Mot de passe courant donc dangereux</label>
+        <label><input type="radio" name="q5" value="0"> D. Clé cryptographique</label>
+    </div>
+    <p id="q5_result" class="correction"></p>
+</div>
+
+<!-- Question 6 -->
+<div class="question-card">
+    <p>6. Un cheval de Troie est :</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="0"> A. Un outil antivirus</label>
+        <label><input type="radio" name="q6" value="0"> B. Une méthode de sauvegarde</label>
+        <label><input type="radio" name="q6" value="1"> C. Un programme malveillant caché</label>
+        <label><input type="radio" name="q6" value="0"> D. Une extension de navigateur</label>
+    </div>
+    <p id="q6_result" class="correction"></p>
+</div>
+
+<!-- Question 7 -->
+<div class="question-card">
+    <p>7. Le ransomware a pour but de :</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="0"> A. Vendre des produits en ligne</label>
+        <label><input type="radio" name="q7" value="0"> B. Améliorer la sécurité du système</label>
+        <label><input type="radio" name="q7" value="1"> C. Crypter les données et demander une rançon</label>
+        <label><input type="radio" name="q7" value="0"> D. Supprimer automatiquement les virus</label>
+    </div>
+    <p id="q7_result" class="correction"></p>
+</div>
+
+<!-- Question 8 -->
+<div class="question-card">
+    <p>8. Quelle pratique réduit les risques avec des logiciels ?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="0"> A. Télécharger tout depuis Google</label>
+        <label><input type="radio" name="q8" value="0"> B. Utiliser des logiciels piratés</label>
+        <label><input type="radio" name="q8" value="1"> C. Faire les mises à jour régulièrement</label>
+        <label><input type="radio" name="q8" value="0"> D. Installer des versions obsolètes</label>
+    </div>
+    <p id="q8_result" class="correction"></p>
+</div>
+
+<!-- Question 9 -->
+<div class="question-card">
+    <p>9. Le CERT-FR est :</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="0"> A. Un antivirus gratuit</label>
+        <label><input type="radio" name="q9" value="0"> B. Une base de données d’images</label>
+        <label><input type="radio" name="q9" value="1"> C. Le site officiel d’alerte en cybersécurité en France</label>
+        <label><input type="radio" name="q9" value="0"> D. Une entreprise de cryptomonnaie</label>
+    </div>
+    <p id="q9_result" class="correction"></p>
+</div>
+
+<!-- Question 10 -->
+<div class="question-card">
+    <p>10. Que permet un pare-feu (firewall) ?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="0"> A. Augmenter la vitesse Internet</label>
+        <label><input type="radio" name="q10" value="1"> B. Bloquer les tentatives d’intrusion</label>
+        <label><input type="radio" name="q10" value="0"> C. Créer des mots de passe forts</label>
+        <label><input type="radio" name="q10" value="0"> D. Définir les droits d’administration</label>
+    </div>
+    <p id="q10_result" class="correction"></p>
+</div>
+
+    <!-- Question 11 -->
+<div class="question-card">
+    <p>11. Quelle extension malveillante était associée à un virus Facebook ?</p>
+    <div class="options">
+        <label><input type="radio" name="q11" value="0"> A. Pika</label>
+        <label><input type="radio" name="q11" value="0"> B. CryptoGuard</label>
+        <label><input type="radio" name="q11" value="1"> C. Eko</label>
+        <label><input type="radio" name="q11" value="0"> D. Facelock</label>
+    </div>
+    <p id="q11_result" class="correction"></p>
+</div>
+
+<!-- Question 12 -->
+<div class="question-card">
+    <p>12. Une clé USB piégée peut :</p>
+    <div class="options">
+        <label><input type="radio" name="q12" value="0"> A. Nettoyer l’ordinateur</label>
+        <label><input type="radio" name="q12" value="0"> B. Installer un système Linux</label>
+        <label><input type="radio" name="q12" value="1"> C. Infecter un ordinateur sans action de l’utilisateur</label>
+        <label><input type="radio" name="q12" value="0"> D. Être sans danger si non ouverte</label>
+    </div>
+    <p id="q12_result" class="correction"></p>
+</div>
+
+<!-- Question 13 -->
+<div class="question-card">
+    <p>13. Le « salage » d’un mot de passe permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q13" value="0"> A. De le rendre plus savoureux</label>
+        <label><input type="radio" name="q13" value="0"> B. De le rendre plus court</label>
+        <label><input type="radio" name="q13" value="1"> C. D’augmenter sa complexité et d’éviter les doublons de hash</label>
+        <label><input type="radio" name="q13" value="0"> D. D’ajouter une photo de sécurité</label>
+    </div>
+    <p id="q13_result" class="correction"></p>
+</div>
+
+<!-- Question 14 -->
+<div class="question-card">
+    <p>14. Un « botnet » est :</p>
+    <div class="options">
+        <label><input type="radio" name="q14" value="0"> A. Un serveur de données</label>
+        <label><input type="radio" name="q14" value="1"> B. Une machine zombie contrôlée à distance</label>
+        <label><input type="radio" name="q14" value="0"> C. Un antivirus mal configuré</label>
+        <label><input type="radio" name="q14" value="0"> D. Un outil d’optimisation de réseau</label>
+    </div>
+    <p id="q14_result" class="correction"></p>
+</div>
+
+<!-- Question 15 -->
+<div class="question-card">
+    <p>15. Un fichier marqué comme immutable sous Linux :</p>
+    <div class="options">
+        <label><input type="radio" name="q15" value="0"> A. Peut être modifié seulement par root</label>
+        <label><input type="radio" name="q15" value="1"> B. Est visible mais non modifiable, même par root</label>
+        <label><input type="radio" name="q15" value="0"> C. Est compressé automatiquement</label>
+        <label><input type="radio" name="q15" value="0"> D. Est un fichier vidéo protégé</label>
+    </div>
+    <p id="q15_result" class="correction"></p>
+</div>
+
+<!-- Question 16 -->
+<div class="question-card">
+    <p>16. Un bon mot de passe ne doit pas contenir :</p>
+    <div class="options">
+        <label><input type="radio" name="q16" value="0"> A. Des chiffres</label>
+        <label><input type="radio" name="q16" value="0"> B. Des caractères spéciaux</label>
+        <label><input type="radio" name="q16" value="1"> C. Des mots du dictionnaire</label>
+        <label><input type="radio" name="q16" value="0"> D. Une majuscule</label>
+    </div>
+    <p id="q16_result" class="correction"></p>
+</div>
+
+<!-- Question 17 -->
+<div class="question-card">
+    <p>17. Que protège une signature numérique ?</p>
+    <div class="options">
+        <label><input type="radio" name="q17" value="0"> A. L’accès à Internet</label>
+        <label><input type="radio" name="q17" value="1"> B. L’identité du signataire et l’intégrité du document</label>
+        <label><input type="radio" name="q17" value="0"> C. Les données bancaires</label>
+        <label><input type="radio" name="q17" value="0"> D. Le code source d’un site</label>
+    </div>
+    <p id="q17_result" class="correction"></p>
+</div>
+
+<!-- Question 18 -->
+<div class="question-card">
+    <p>18. Quel est l’un des risques principaux du phishing ?</p>
+    <div class="options">
+        <label><input type="radio" name="q18" value="0"> A. Perte de mot de passe WiFi</label>
+        <label><input type="radio" name="q18" value="1"> B. Vol d’identité et de données sensibles</label>
+        <label><input type="radio" name="q18" value="0"> C. Mauvaise qualité vidéo</label>
+        <label><input type="radio" name="q18" value="0"> D. Ralentissement d’Internet</label>
+    </div>
+    <p id="q18_result" class="correction"></p>
+</div>
+
+<!-- Question 19 -->
+<div class="question-card">
+    <p>19. La sécurité passive inclut :</p>
+    <div class="options">
+        <label><input type="radio" name="q19" value="0"> A. Un VPN</label>
+        <label><input type="radio" name="q19" value="1"> B. Une mise à jour du navigateur</label>
+        <label><input type="radio" name="q19" value="0"> C. L’activation de la webcam</label>
+        <label><input type="radio" name="q19" value="0"> D. Un code QR</label>
+    </div>
+    <p id="q19_result" class="correction"></p>
+</div>
+
+<!-- Question 20 -->
+<div class="question-card">
+    <p>20. Quelle solution est utilisée pour stocker tous ses mots de passe avec un seul accès ?</p>
+    <div class="options">
+        <label><input type="radio" name="q20" value="1"> A. Keepass / LastPass</label>
+        <label><input type="radio" name="q20" value="0"> B. FileZilla</label>
+        <label><input type="radio" name="q20" value="0"> C. Firefox</label>
+        <label><input type="radio" name="q20" value="0"> D. Excel</label>
+    </div>
+    <p id="q20_result" class="correction"></p>
+</div>
+
+
+   <input type="button" value="Vérifier le score Thème 1" onclick="checkScore(1,20,'result1')">
+    <p id="result1"></p>
+</div>    
+
+<div class="theme theme2">
+    <h2>Thème 2 : Cryptage, protection et authentification</h2>
+
+<!-- Question 21 -->
+<div class="question-card">
+    <p>21. À quoi sert le cryptage des données ?</p>
+    <div class="options">
+        <label><input type="radio" name="q21" value="0"> A. À les rendre plus visibles sur le Web</label>
+        <label><input type="radio" name="q21" value="0"> B. À compresser les fichiers</label>
+        <label><input type="radio" name="q21" value="1"> C. À rendre les données illisibles sans la clé</label>
+        <label><input type="radio" name="q21" value="0"> D. À supprimer les doublons</label>
+    </div>
+    <p id="q21_result" class="correction"></p>
+</div>
+
+<!-- Question 22 -->
+<div class="question-card">
+    <p>22. Quelle méthode de cryptage utilise une seule clé pour chiffrer et déchiffrer ?</p>
+    <div class="options">
+        <label><input type="radio" name="q22" value="1"> A. Cryptage symétrique</label>
+        <label><input type="radio" name="q22" value="0"> B. Cryptage asymétrique</label>
+        <label><input type="radio" name="q22" value="0"> C. Cryptage numérique</label>
+        <label><input type="radio" name="q22" value="0"> D. Cryptage biométrique</label>
+    </div>
+    <p id="q22_result" class="correction"></p>
+</div>
+
+<!-- Question 23 -->
+<div class="question-card">
+    <p>23. Le cryptage asymétrique repose sur :</p>
+    <div class="options">
+        <label><input type="radio" name="q23" value="0"> A. Une clé USB sécurisée</label>
+        <label><input type="radio" name="q23" value="1"> B. Une paire de clés publique/privée</label>
+        <label><input type="radio" name="q23" value="0"> C. Le mot de passe système</label>
+        <label><input type="radio" name="q23" value="0"> D. Le numéro de série du disque dur</label>
+    </div>
+    <p id="q23_result" class="correction"></p>
+</div>
+
+<!-- Question 24 -->
+<div class="question-card">
+    <p>24. Le logiciel VeraCrypt permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q24" value="0"> A. D’éditer du texte crypté</label>
+        <label><input type="radio" name="q24" value="0"> B. D'envoyer des mails sécurisés</label>
+        <label><input type="radio" name="q24" value="1"> C. De crypter des disques ou partitions</label>
+        <label><input type="radio" name="q24" value="0"> D. De modifier une adresse IP</label>
+    </div>
+    <p id="q24_result" class="correction"></p>
+</div>
+
+<!-- Question 25 -->
+<div class="question-card">
+    <p>25. La clé publique d’un portefeuille de cryptomonnaie sert à :</p>
+    <div class="options">
+        <label><input type="radio" name="q25" value="1"> A. Recevoir des actifs</label>
+        <label><input type="radio" name="q25" value="0"> B. Modifier les données du portefeuille</label>
+        <label><input type="radio" name="q25" value="0"> C. Détruire les transactions</label>
+        <label><input type="radio" name="q25" value="0"> D. Réinitialiser la blockchain</label>
+    </div>
+    <p id="q25_result" class="correction"></p>
+</div>
+
+<!-- Question 26 -->
+<div class="question-card">
+    <p>26. Pour signer numériquement un document, on utilise :</p>
+    <div class="options">
+        <label><input type="radio" name="q26" value="0"> A. Un VPN</label>
+        <label><input type="radio" name="q26" value="1"> B. Le cryptage asymétrique et une fonction de hash</label>
+        <label><input type="radio" name="q26" value="0"> C. Un scan de signature manuscrite</label>
+        <label><input type="radio" name="q26" value="0"> D. Une carte d'identité numérique</label>
+    </div>
+    <p id="q26_result" class="correction"></p>
+</div>
+
+<!-- Question 27 -->
+<div class="question-card">
+    <p>27. Une signature numérique est :</p>
+    <div class="options">
+        <label><input type="radio" name="q27" value="1"> A. Inaltérable et infalsifiable</label>
+        <label><input type="radio" name="q27" value="0"> B. Réutilisable pour d’autres documents</label>
+        <label><input type="radio" name="q27" value="0"> C. Basée sur une clé unique partagée</label>
+        <label><input type="radio" name="q27" value="0"> D. Visible uniquement sur papier</label>
+    </div>
+    <p id="q27_result" class="correction"></p>
+</div>
+
+<!-- Question 28 -->
+<div class="question-card">
+    <p>28. Que permet une fonction de hachage (hash) ?</p>
+    <div class="options">
+        <label><input type="radio" name="q28" value="0"> A. Protéger les cookies</label>
+        <label><input type="radio" name="q28" value="1"> B. Créer une empreinte unique d’un fichier</label>
+        <label><input type="radio" name="q28" value="0"> C. Convertir un texte en image</label>
+        <label><input type="radio" name="q28" value="0"> D. Trouver la langue d’un document</label>
+    </div>
+    <p id="q28_result" class="correction"></p>
+</div>
+
+<!-- Question 29 -->
+<div class="question-card">
+    <p>29. Qu’est-ce que le chiffrement RSA utilise ?</p>
+    <div class="options">
+        <label><input type="radio" name="q29" value="0"> A. Une seule clé</label>
+        <label><input type="radio" name="q29" value="1"> B. Deux grands nombres premiers</label>
+        <label><input type="radio" name="q29" value="0"> C. Un mot de passe global</label>
+        <label><input type="radio" name="q29" value="0"> D. Un algorithme biométrique</label>
+    </div>
+    <p id="q29_result" class="correction"></p>
+</div>
+
+<!-- Question 30 -->
+<div class="question-card">
+    <p>30. En cryptage asymétrique, qui peut lire un message chiffré ?</p>
+    <div class="options">
+        <label><input type="radio" name="q30" value="0"> A. Tout le monde</label>
+        <label><input type="radio" name="q30" value="0"> B. Celui qui l’a écrit</label>
+        <label><input type="radio" name="q30" value="1"> C. Celui qui possède la clé privée correspondante</label>
+        <label><input type="radio" name="q30" value="0"> D. Le FAI</label>
+    </div>
+    <p id="q30_result" class="correction"></p>
+</div>
+
+<!-- Question 31 -->
+<div class="question-card">
+    <p>31. En France, le cryptage était considéré comme une arme jusqu’à :</p>
+    <div class="options">
+        <label><input type="radio" name="q31" value="0"> A. 1980</label>
+        <label><input type="radio" name="q31" value="0"> B. 1990</label>
+        <label><input type="radio" name="q31" value="1"> C. 1996</label>
+        <label><input type="radio" name="q31" value="0"> D. 2004</label>
+    </div>
+    <p id="q31_result" class="correction"></p>
+</div>
+
+<!-- Question 32 -->
+<div class="question-card">
+    <p>32. Le chiffrement des communications HTTPS garantit :</p>
+    <div class="options">
+        <label><input type="radio" name="q32" value="0"> A. L’anonymat total</label>
+        <label><input type="radio" name="q32" value="0"> B. L’origine géographique de l’utilisateur</label>
+        <label><input type="radio" name="q32" value="1"> C. La sécurité des échanges entre client et serveur</label>
+        <label><input type="radio" name="q32" value="0"> D. La compression des fichiers</label>
+    </div>
+    <p id="q32_result" class="correction"></p>
+</div>
+
+<!-- Question 33 -->
+<div class="question-card">
+    <p>33. Que se passe-t-il si on perd la clé d’un fichier crypté ?</p>
+    <div class="options">
+        <label><input type="radio" name="q33" value="0"> A. Il est restauré automatiquement</label>
+        <label><input type="radio" name="q33" value="1"> B. Il devient inaccessible</label>
+        <label><input type="radio" name="q33" value="0"> C. Il se décrypte seul après un délai</label>
+        <label><input type="radio" name="q33" value="0"> D. Il est transféré sur le cloud</label>
+    </div>
+    <p id="q33_result" class="correction"></p>
+</div>
+
+<!-- Question 34 -->
+<div class="question-card">
+    <p>34. Quelle est la différence majeure entre cryptage symétrique et asymétrique ?</p>
+    <div class="options">
+        <label><input type="radio" name="q34" value="0"> A. La vitesse de lecture</label>
+        <label><input type="radio" name="q34" value="0"> B. Le format des données</label>
+        <label><input type="radio" name="q34" value="1"> C. Le nombre de clés utilisées</label>
+        <label><input type="radio" name="q34" value="0"> D. La taille des fichiers</label>
+    </div>
+    <p id="q34_result" class="correction"></p>
+</div>
+
+<!-- Question 35 -->
+<div class="question-card">
+    <p>35. Quelle longueur a une adresse IP en IPv6 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q35" value="0"> A. 32 bits</label>
+        <label><input type="radio" name="q35" value="0"> B. 64 bits</label>
+        <label><input type="radio" name="q35" value="1"> C. 128 bits</label>
+        <label><input type="radio" name="q35" value="0"> D. 256 bits</label>
+    </div>
+    <p id="q35_result" class="correction"></p>
+</div>
+
+<!-- Question 36 -->
+<div class="question-card">
+    <p>36. Un fichier crypté est illisible sans :</p>
+    <div class="options">
+        <label><input type="radio" name="q36" value="0"> A. Navigateur Internet</label>
+        <label><input type="radio" name="q36" value="0"> B. Antivirus à jour</label>
+        <label><input type="radio" name="q36" value="0"> C. Connexion réseau</label>
+        <label><input type="radio" name="q36" value="1"> D. La clé de décryptage</label>
+    </div>
+    <p id="q36_result" class="correction"></p>
+</div>
+
+<!-- Question 37 -->
+<div class="question-card">
+    <p>37. Le hachage est souvent utilisé pour :</p>
+    <div class="options">
+        <label><input type="radio" name="q37" value="0"> A. Améliorer le design web</label>
+        <label><input type="radio" name="q37" value="0"> B. Lire les fichiers texte</label>
+        <label><input type="radio" name="q37" value="1"> C. Vérifier l’intégrité d’un fichier</label>
+        <label><input type="radio" name="q37" value="0"> D. Accélérer le réseau</label>
+    </div>
+    <p id="q37_result" class="correction"></p>
+</div>
+
+<!-- Question 38 -->
+<div class="question-card">
+    <p>38. L’identifiant unique d’un bloc dans une blockchain est appelé :</p>
+    <div class="options">
+        <label><input type="radio" name="q38" value="0"> A. Cookie</label>
+        <label><input type="radio" name="q38" value="0"> B. Token</label>
+        <label><input type="radio" name="q38" value="1"> C. Hash</label>
+        <label><input type="radio" name="q38" value="0"> D. Pseudo-ID</label>
+    </div>
+    <p id="q38_result" class="correction"></p>
+</div>
+
+<!-- Question 39 -->
+<div class="question-card">
+    <p>39. Que fait une transaction enregistrée dans une blockchain ?</p>
+    <div class="options">
+        <label><input type="radio" name="q39" value="0"> A. Elle disparaît au bout de 24h</label>
+        <label><input type="radio" name="q39" value="0"> B. Elle peut être modifiée manuellement</label>
+        <label><input type="radio" name="q39" value="1"> C. Elle est immuable</label>
+        <label><input type="radio" name="q39" value="0"> D. Elle est supprimée si l’utilisateur le demande</label>
+    </div>
+    <p id="q39_result" class="correction"></p>
+</div>
+
+<!-- Question 40 -->
+<div class="question-card">
+    <p>40. Quelle est l’une des failles possibles dans un système de cryptage ?</p>
+    <div class="options">
+        <label><input type="radio" name="q40" value="0"> A. Trop de mémoire RAM</label>
+        <label><input type="radio" name="q40" value="1"> B. Perte de la clé ou attaque par force brute</label>
+        <label><input type="radio" name="q40" value="0"> C. Connexion rapide</label>
+        <label><input type="radio" name="q40" value="0"> D. Présence de cookies</label>
+    </div>
+    <p id="q40_result" class="correction"></p>
+</div>
+
+
+      <input type="button" value="Vérifier le score Thème 2" onclick="checkScore(21,40,'result2')">
+    <p id="result2"></p>
+</div>
+
+
+<div class="theme theme3">
+    <h2>Thème 3 : Internet et protocoles</h2>
+
+<!-- Question 41 -->
+<div class="question-card">
+    <p>41. Quelle est la signification du mot "Internet" ?</p>
+    <div class="options">
+        <label><input type="radio" name="q41" value="0"> A. Intranet sécurisé</label>
+        <label><input type="radio" name="q41" value="0"> B. Réseau local fermé</label>
+        <label><input type="radio" name="q41" value="1"> C. Interconnexion de réseaux</label>
+        <label><input type="radio" name="q41" value="0"> D. Réseau centralisé</label>
+    </div>
+    <p id="q41_result" class="correction"></p>
+</div>
+
+<!-- Question 42 -->
+<div class="question-card">
+    <p>42. Quel était l’ancêtre d’Internet ?</p>
+    <div class="options">
+        <label><input type="radio" name="q42" value="0"> A. World Wide Web</label>
+        <label><input type="radio" name="q42" value="1"> B. ARPANET</label>
+        <label><input type="radio" name="q42" value="0"> C. FacebookNet</label>
+        <label><input type="radio" name="q42" value="0"> D. TCP/IP</label>
+    </div>
+    <p id="q42_result" class="correction"></p>
+</div>
+
+<!-- Question 43 -->
+<div class="question-card">
+    <p>43. Quelle est la différence entre Internet et le Web ?</p>
+    <div class="options">
+        <label><input type="radio" name="q43" value="0"> A. Il n’y en a pas</label>
+        <label><input type="radio" name="q43" value="1"> B. Internet est le support, le Web est un service parmi d'autres</label>
+        <label><input type="radio" name="q43" value="0"> C. Le Web est plus sécurisé</label>
+        <label><input type="radio" name="q43" value="0"> D. Internet est uniquement pour les entreprises</label>
+    </div>
+    <p id="q43_result" class="correction"></p>
+</div>
+
+<!-- Question 44 -->
+<div class="question-card">
+    <p>44. À quoi sert le DNS ?</p>
+    <div class="options">
+        <label><input type="radio" name="q44" value="0"> A. À bloquer les cookies</label>
+        <label><input type="radio" name="q44" value="0"> B. À crypter les données</label>
+        <label><input type="radio" name="q44" value="1"> C. À convertir un nom de domaine en adresse IP</label>
+        <label><input type="radio" name="q44" value="0"> D. À créer une adresse email</label>
+    </div>
+    <p id="q44_result" class="correction"></p>
+</div>
+
+<!-- Question 45 -->
+<div class="question-card">
+    <p>45. Une adresse IP est similaire à :</p>
+    <div class="options">
+        <label><input type="radio" name="q45" value="0"> A. Un numéro de téléphone</label>
+        <label><input type="radio" name="q45" value="0"> B. Une carte graphique</label>
+        <label><input type="radio" name="q45" value="1"> C. Une adresse postale pour les machines</label>
+        <label><input type="radio" name="q45" value="0"> D. Un mot de passe</label>
+    </div>
+    <p id="q45_result" class="correction"></p>
+</div>
+
+<!-- Question 46 -->
+<div class="question-card">
+    <p>46. Combien de bits comporte une adresse IPv4 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q46" value="0"> A. 16</label>
+        <label><input type="radio" name="q46" value="1"> B. 32</label>
+        <label><input type="radio" name="q46" value="0"> C. 64</label>
+        <label><input type="radio" name="q46" value="0"> D. 128</label>
+    </div>
+    <p id="q46_result" class="correction"></p>
+</div>
+
+<!-- Question 47 -->
+<div class="question-card">
+    <p>47. Quelle est l’adresse loopback en IPv4 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q47" value="1"> A. 127.0.0.1</label>
+        <label><input type="radio" name="q47" value="0"> B. 255.255.255.255</label>
+        <label><input type="radio" name="q47" value="0"> C. 192.168.1.1</label>
+        <label><input type="radio" name="q47" value="0"> D. 8.8.8.8</label>
+    </div>
+    <p id="q47_result" class="correction"></p>
+</div>
+
+<!-- Question 48 -->
+<div class="question-card">
+    <p>48. Pourquoi passe-t-on à l’IPv6 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q48" value="0"> A. Pour de meilleures vidéos</label>
+        <label><input type="radio" name="q48" value="0"> B. Pour plus de vitesse</label>
+        <label><input type="radio" name="q48" value="1"> C. Parce que l’IPv4 ne suffit plus (épuisement des adresses)</label>
+        <label><input type="radio" name="q48" value="0"> D. Parce que c’est plus simple</label>
+    </div>
+    <p id="q48_result" class="correction"></p>
+</div>
+
+<!-- Question 49 -->
+<div class="question-card">
+    <p>49. Quelle est la taille d’une adresse IPv6 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q49" value="0"> A. 32 bits</label>
+        <label><input type="radio" name="q49" value="0"> B. 64 bits</label>
+        <label><input type="radio" name="q49" value="1"> C. 128 bits</label>
+        <label><input type="radio" name="q49" value="0"> D. 256 bits</label>
+    </div>
+    <p id="q49_result" class="correction"></p>
+</div>
+
+<!-- Question 50 -->
+<div class="question-card">
+    <p>50. Le routage permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q50" value="0"> A. De bloquer les intrusions</label>
+        <label><input type="radio" name="q50" value="1"> B. De faire circuler les données sur le bon chemin</label>
+        <label><input type="radio" name="q50" value="0"> C. D’activer le cryptage</label>
+        <label><input type="radio" name="q50" value="0"> D. D’effacer les logs</label>
+    </div>
+    <p id="q50_result" class="correction"></p>
+</div>
+
+<!-- Question 51 -->
+<div class="question-card">
+    <p>51. Quelle est la fonction du NAT ?</p>
+    <div class="options">
+        <label><input type="radio" name="q51" value="0"> A. Sauvegarder les cookies</label>
+        <label><input type="radio" name="q51" value="1"> B. Partager une adresse IP publique entre plusieurs machines locales</label>
+        <label><input type="radio" name="q51" value="0"> C. Récupérer une adresse email</label>
+        <label><input type="radio" name="q51" value="0"> D. Crypter les échanges</label>
+    </div>
+    <p id="q51_result" class="correction"></p>
+</div>
+
+<!-- Question 52 -->
+<div class="question-card">
+    <p>52. Qu’est-ce qu’un port dans une communication réseau ?</p>
+    <div class="options">
+        <label><input type="radio" name="q52" value="0"> A. Un port USB</label>
+        <label><input type="radio" name="q52" value="1"> B. Une “boîte aux lettres” logicielle pour les services d’une machine</label>
+        <label><input type="radio" name="q52" value="0"> C. Une adresse IP</label>
+        <label><input type="radio" name="q52" value="0"> D. Un serveur DNS</label>
+    </div>
+    <p id="q52_result" class="correction"></p>
+</div>
+
+<!-- Question 53 -->
+<div class="question-card">
+    <p>53. Le protocole HTTP est utilisé pour :</p>
+    <div class="options">
+        <label><input type="radio" name="q53" value="0"> A. Lire un fichier PDF</label>
+        <label><input type="radio" name="q53" value="1"> B. Afficher des pages Web</label>
+        <label><input type="radio" name="q53" value="0"> C. Transférer des emails</label>
+        <label><input type="radio" name="q53" value="0"> D. Faire un ping réseau</label>
+    </div>
+    <p id="q53_result" class="correction"></p>
+</div>
+
+<!-- Question 54 -->
+<div class="question-card">
+    <p>54. Que permet le protocole HTTPS ?</p>
+    <div class="options">
+        <label><input type="radio" name="q54" value="0"> A. Envoyer des vidéos</label>
+        <label><input type="radio" name="q54" value="1"> B. Protéger les données échangées entre le navigateur et le site Web</label>
+        <label><input type="radio" name="q54" value="0"> C. Télécharger des pilotes</label>
+        <label><input type="radio" name="q54" value="0"> D. Supprimer les cookies</label>
+    </div>
+    <p id="q54_result" class="correction"></p>
+</div>
+
+<!-- Question 55 -->
+<div class="question-card">
+    <p>55. Dans quelle couche réseau trouve-t-on l’IP ?</p>
+    <div class="options">
+        <label><input type="radio" name="q55" value="0"> A. Physique</label>
+        <label><input type="radio" name="q55" value="1"> B. Réseau</label>
+        <label><input type="radio" name="q55" value="0"> C. Application</label>
+        <label><input type="radio" name="q55" value="0"> D. Transport</label>
+    </div>
+    <p id="q55_result" class="correction"></p>
+</div>
+
+<!-- Question 56 -->
+<div class="question-card">
+    <p>56. Le protocole TCP permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q56" value="0"> A. Une navigation anonyme</label>
+        <label><input type="radio" name="q56" value="1"> B. Une communication fiable, sans perte de données</label>
+        <label><input type="radio" name="q56" value="0"> C. De bloquer les virus</label>
+        <label><input type="radio" name="q56" value="0"> D. Une conversion d’IP</label>
+    </div>
+    <p id="q56_result" class="correction"></p>
+</div>
+
+<!-- Question 57 -->
+<div class="question-card">
+    <p>57. Le UDP est différent du TCP car il :</p>
+    <div class="options">
+        <label><input type="radio" name="q57" value="0"> A. N'utilise pas d’adresse IP</label>
+        <label><input type="radio" name="q57" value="0"> B. Est sécurisé</label>
+        <label><input type="radio" name="q57" value="1"> C. Ne garantit pas la livraison des paquets</label>
+        <label><input type="radio" name="q57" value="0"> D. Est utilisé uniquement dans les VPN</label>
+    </div>
+    <p id="q57_result" class="correction"></p>
+</div>
+
+<!-- Question 58 -->
+<div class="question-card">
+    <p>58. La topologie d’Internet est :</p>
+    <div class="options">
+        <label><input type="radio" name="q58" value="0"> A. Linéaire</label>
+        <label><input type="radio" name="q58" value="0"> B. Étoilée</label>
+        <label><input type="radio" name="q58" value="1"> C. Hiérarchique mais maillée (plusieurs chemins possibles)</label>
+        <label><input type="radio" name="q58" value="0"> D. Câblée uniquement</label>
+    </div>
+    <p id="q58_result" class="correction"></p>
+</div>
+
+<!-- Question 59 -->
+<div class="question-card">
+    <p>59. Exemple de protocole de transfert de fichiers :</p>
+    <div class="options">
+        <label><input type="radio" name="q59" value="0"> A. HTTPS</label>
+        <label><input type="radio" name="q59" value="1"> B. FTP</label>
+        <label><input type="radio" name="q59" value="0"> C. SSHFS</label>
+        <label><input type="radio" name="q59" value="0"> D. SMTP</label>
+    </div>
+    <p id="q59_result" class="correction"></p>
+</div>
+
+<!-- Question 60 -->
+<div class="question-card">
+    <p>60. Quelle est la conséquence d’une attaque par déni de service (DoS) ?</p>
+    <div class="options">
+        <label><input type="radio" name="q60" value="0"> A. Augmentation du trafic DNS</label>
+        <label><input type="radio" name="q60" value="0"> B. Blocage d’accès aux services ou sites</label>
+        <label><input type="radio" name="q60" value="1"> C. Surcharge d’un serveur par un trafic massif</label>
+        <label><input type="radio" name="q60" value="0"> D. Perte de mot de passe</label>
+    </div>
+    <p id="q60_result" class="correction"></p>
+</div>
+
+
+ <input type="button" value="Vérifier le score Thème 3" onclick="checkScore(41,60,'result3')">
+    <p id="result3"></p>
+</div>
+
+
+<div class="theme theme4">
+    <h2>Thème 4 : Cryptomonnaies et blockchain</h2>
+
+<!-- Question 61 -->
+<div class="question-card">
+    <p>61. À l’origine, la blockchain est :</p>
+    <div class="options">
+        <label><input type="radio" name="q61" value="1"> A. Un registre décentralisé de transactions</label>
+        <label><input type="radio" name="q61" value="0"> B. Une application de chat sécurisée</label>
+        <label><input type="radio" name="q61" value="0"> C. Un système de cloud</label>
+        <label><input type="radio" name="q61" value="0"> D. Un logiciel de minage</label>
+    </div>
+    <p id="q61_result" class="correction"></p>
+</div>
+
+<!-- Question 62 -->
+<div class="question-card">
+    <p>62. Une blockchain est dite immuable car :</p>
+    <div class="options">
+        <label><input type="radio" name="q62" value="0"> A. Elle est toujours connectée à Internet</label>
+        <label><input type="radio" name="q62" value="0"> B. Les données peuvent être supprimées à volonté</label>
+        <label><input type="radio" name="q62" value="1"> C. Les transactions ne peuvent pas être modifiées ou effacées</label>
+        <label><input type="radio" name="q62" value="0"> D. Elle se met à jour toutes les heures</label>
+    </div>
+    <p id="q62_result" class="correction"></p>
+</div>
+
+<!-- Question 63 -->
+<div class="question-card">
+    <p>63. Pour supprimer une transaction dans la blockchain, il faut :</p>
+    <div class="options">
+        <label><input type="radio" name="q63" value="0"> A. Appuyer sur « supprimer » dans l'application</label>
+        <label><input type="radio" name="q63" value="0"> B. Envoyer un email à l’administrateur</label>
+        <label><input type="radio" name="q63" value="1"> C. Créer une transaction inverse</label>
+        <label><input type="radio" name="q63" value="0"> D. Payer une taxe spéciale</label>
+    </div>
+    <p id="q63_result" class="correction"></p>
+</div>
+
+<!-- Question 64 -->
+<div class="question-card">
+    <p>64. Le consensus dans une blockchain permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q64" value="0"> A. De voter pour élire un président</label>
+        <label><input type="radio" name="q64" value="1"> B. De valider les transactions entre utilisateurs</label>
+        <label><input type="radio" name="q64" value="0"> C. D’annuler les transactions invalides</label>
+        <label><input type="radio" name="q64" value="0"> D. De limiter les frais de transaction</label>
+    </div>
+    <p id="q64_result" class="correction"></p>
+</div>
+
+<!-- Question 65 -->
+<div class="question-card">
+    <p>65. Le « proof of work » est :</p>
+    <div class="options">
+        <label><input type="radio" name="q65" value="0"> A. Un mot de passe crypté</label>
+        <label><input type="radio" name="q65" value="0"> B. Une preuve d’identité biométrique</label>
+        <label><input type="radio" name="q65" value="1"> C. Une méthode de validation basée sur le calcul</label>
+        <label><input type="radio" name="q65" value="0"> D. Une technique de piratage</label>
+    </div>
+    <p id="q65_result" class="correction"></p>
+</div>
+
+<!-- Question 66 -->
+<div class="question-card">
+    <p>66. Le minage permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q66" value="0"> A. De supprimer des blocs</label>
+        <label><input type="radio" name="q66" value="0"> B. D’accélérer Internet</label>
+        <label><input type="radio" name="q66" value="1"> C. De valider des blocs et de recevoir une récompense</label>
+        <label><input type="radio" name="q66" value="0"> D. De crypter un portefeuille</label>
+    </div>
+    <p id="q66_result" class="correction"></p>
+</div>
+
+<!-- Question 67 -->
+<div class="question-card">
+    <p>67. Dans un portefeuille de cryptomonnaie, la clé publique sert à :</p>
+    <div class="options">
+        <label><input type="radio" name="q67" value="0"> A. Détruire les actifs</label>
+        <label><input type="radio" name="q67" value="1"> B. Recevoir des actifs</label>
+        <label><input type="radio" name="q67" value="0"> C. Générer du Bitcoin</label>
+        <label><input type="radio" name="q67" value="0"> D. Modifier les anciennes transactions</label>
+    </div>
+    <p id="q67_result" class="correction"></p>
+</div>
+
+<!-- Question 68 -->
+<div class="question-card">
+    <p>68. La clé privée d’un portefeuille sert à :</p>
+    <div class="options">
+        <label><input type="radio" name="q68" value="0"> A. Recevoir du Bitcoin</label>
+        <label><input type="radio" name="q68" value="0"> B. Voir le solde de son compte</label>
+        <label><input type="radio" name="q68" value="1"> C. Signer une transaction et accéder aux fonds</label>
+        <label><input type="radio" name="q68" value="0"> D. Recharger sa batterie</label>
+    </div>
+    <p id="q68_result" class="correction"></p>
+</div>
+
+<!-- Question 69 -->
+<div class="question-card">
+    <p>69. Quelle est la première cryptomonnaie créée ?</p>
+    <div class="options">
+        <label><input type="radio" name="q69" value="0"> A. Ethereum</label>
+        <label><input type="radio" name="q69" value="0"> B. Litecoin</label>
+        <label><input type="radio" name="q69" value="1"> C. Bitcoin</label>
+        <label><input type="radio" name="q69" value="0"> D. Ripple</label>
+    </div>
+    <p id="q69_result" class="correction"></p>
+</div>
+
+<!-- Question 70 -->
+<div class="question-card">
+    <p>70. Qui est le créateur du Bitcoin ?</p>
+    <div class="options">
+        <label><input type="radio" name="q70" value="0"> A. Elon Musk</label>
+        <label><input type="radio" name="q70" value="1"> B. Satoshi Nakamoto (pseudonyme)</label>
+        <label><input type="radio" name="q70" value="0"> C. Vitalik Buterin</label>
+        <label><input type="radio" name="q70" value="0"> D. Edward Snowden</label>
+    </div>
+    <p id="q70_result" class="correction"></p>
+</div>
+
+<!-- Question 71 -->
+<div class="question-card">
+    <p>71. Quelle est l’une des critiques principales contre le Bitcoin ?</p>
+    <div class="options">
+        <label><input type="radio" name="q71" value="0"> A. Trop sécurisé</label>
+        <label><input type="radio" name="q71" value="0"> B. Manque de capitalisation</label>
+        <label><input type="radio" name="q71" value="1"> C. Écologiquement coûteux (énergie)</label>
+        <label><input type="radio" name="q71" value="0"> D. Utilisé uniquement par les banques</label>
+    </div>
+    <p id="q71_result" class="correction"></p>
+</div>
+
+<!-- Question 72 -->
+<div class="question-card">
+    <p>72. La valeur d’une cryptomonnaie dépend :</p>
+    <div class="options">
+        <label><input type="radio" name="q72" value="0"> A. Du volume d’eau utilisé</label>
+        <label><input type="radio" name="q72" value="0"> B. Du nombre de banques l’acceptant</label>
+        <label><input type="radio" name="q72" value="1"> C. De la spéculation et du coût du minage</label>
+        <label><input type="radio" name="q72" value="0"> D. De son origine géographique</label>
+    </div>
+    <p id="q72_result" class="correction"></p>
+</div>
+
+<!-- Question 73 -->
+<div class="question-card">
+    <p>73. Une transaction Bitcoin est confirmée lorsque :</p>
+    <div class="options">
+        <label><input type="radio" name="q73" value="0"> A. Le serveur l’approuve</label>
+        <label><input type="radio" name="q73" value="0"> B. Elle a été vue par 2 utilisateurs</label>
+        <label><input type="radio" name="q73" value="1"> C. Elle a reçu un certain nombre de confirmations</label>
+        <label><input type="radio" name="q73" value="0"> D. Le FAI la valide</label>
+    </div>
+    <p id="q73_result" class="correction"></p>
+</div>
+
+<!-- Question 74 -->
+<div class="question-card">
+    <p>74. Qu’est-ce qu’un bloc dans la blockchain ?</p>
+    <div class="options">
+        <label><input type="radio" name="q74" value="0"> A. Un document administratif</label>
+        <label><input type="radio" name="q74" value="1"> B. Une série de transactions regroupées avec un identifiant unique</label>
+        <label><input type="radio" name="q74" value="0"> C. Un code HTML</label>
+        <label><input type="radio" name="q74" value="0"> D. Un logiciel de calcul</label>
+    </div>
+    <p id="q74_result" class="correction"></p>
+</div>
+
+<!-- Question 75 -->
+<div class="question-card">
+    <p>75. Le hash d’un bloc est :</p>
+    <div class="options">
+        <label><input type="radio" name="q75" value="0"> A. Une image du bloc</label>
+        <label><input type="radio" name="q75" value="0"> B. Un logiciel de compression</label>
+        <label><input type="radio" name="q75" value="1"> C. Une empreinte unique représentant le bloc</label>
+        <label><input type="radio" name="q75" value="0"> D. Un mot de passe temporaire</label>
+    </div>
+    <p id="q75_result" class="correction"></p>
+</div>
+
+<!-- Question 76 -->
+<div class="question-card">
+    <p>76. La blockchain garantit la sécurité grâce à :</p>
+    <div class="options">
+        <label><input type="radio" name="q76" value="0"> A. La mémoire RAM</label>
+        <label><input type="radio" name="q76" value="1"> B. La cryptographie et la décentralisation</label>
+        <label><input type="radio" name="q76" value="0"> C. La 5G</label>
+        <label><input type="radio" name="q76" value="0"> D. La compression de fichiers</label>
+    </div>
+    <p id="q76_result" class="correction"></p>
+</div>
+
+<!-- Question 77 -->
+<div class="question-card">
+    <p>77. Le Salvador a adopté le Bitcoin comme :</p>
+    <div class="options">
+        <label><input type="radio" name="q77" value="0"> A. Moyen de stockage numérique</label>
+        <label><input type="radio" name="q77" value="1"> B. Monnaie légale (en 2021)</label>
+        <label><input type="radio" name="q77" value="0"> C. Carte d’identité numérique</label>
+        <label><input type="radio" name="q77" value="0"> D. Application mobile éducative</label>
+    </div>
+    <p id="q77_result" class="correction"></p>
+</div>
+
+<!-- Question 78 -->
+<div class="question-card">
+    <p>78. Quelle est une conséquence de l’usage massif du minage ?</p>
+    <div class="options">
+        <label><input type="radio" name="q78" value="0"> A. Ralentissement du Web</label>
+        <label><input type="radio" name="q78" value="0"> B. Trop de cryptomonnaies créées</label>
+        <label><input type="radio" name="q78" value="1"> C. Pénurie de cartes graphiques</label>
+        <label><input type="radio" name="q78" value="0"> D. Piratage généralisé</label>
+    </div>
+    <p id="q78_result" class="correction"></p>
+</div>
+
+<!-- Question 79 -->
+<div class="question-card">
+    <p>79. La preuve de participation (proof of stake) se base sur :</p>
+    <div class="options">
+        <label><input type="radio" name="q79" value="0"> A. La reconnaissance faciale</label>
+        <label><input type="radio" name="q79" value="0"> B. L’adresse IP de l’utilisateur</label>
+        <label><input type="radio" name="q79" value="1"> C. La quantité détenue de la cryptomonnaie</label>
+        <label><input type="radio" name="q79" value="0"> D. Le nom de domaine</label>
+    </div>
+    <p id="q79_result" class="correction"></p>
+</div>
+
+<!-- Question 80 -->
+<div class="question-card">
+    <p>80. Une propriété essentielle de la blockchain est :</p>
+    <div class="options">
+        <label><input type="radio" name="q80" value="0"> A. Elle est centralisée et contrôlée</label>
+        <label><input type="radio" name="q80" value="0"> B. Les données sont temporaires</label>
+        <label><input type="radio" name="q80" value="1"> C. Elle est transparente, distribuée, et durable</label>
+        <label><input type="radio" name="q80" value="0"> D. Elle est réservée aux banques</label>
+    </div>
+    <p id="q80_result" class="correction"></p>
+</div>
+
+
+ <input type="button" value="Vérifier le score Thème 4" onclick="checkScore(61,80,'result4')">
+    <p id="result4"></p>
+</div>
+
+<div class="theme theme5">
+    <h2>Thème 5 : Traces, vie privée et données personnelles</h2>
+
+
+<!-- Question 81 -->
+<div class="question-card">
+    <p>81. Les « traces locales » sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q81" value="1"> A. Les informations laissées sur votre propre appareil</label>
+        <label><input type="radio" name="q81" value="0"> B. Les données collectées sur les réseaux sociaux</label>
+        <label><input type="radio" name="q81" value="0"> C. Les mails envoyés</label>
+        <label><input type="radio" name="q81" value="0"> D. Les fichiers de sauvegarde sur le cloud</label>
+    </div>
+    <p id="q81_result" class="correction"></p>
+</div>
+
+<!-- Question 82 -->
+<div class="question-card">
+    <p>82. Un cookie est :</p>
+    <div class="options">
+        <label><input type="radio" name="q82" value="0"> A. Un virus informatique</label>
+        <label><input type="radio" name="q82" value="0"> B. Une sauvegarde automatique</label>
+        <label><input type="radio" name="q82" value="1"> C. Un petit fichier déposé par un site Web pour enregistrer des infos</label>
+        <label><input type="radio" name="q82" value="0"> D. Un raccourci vers votre profil</label>
+    </div>
+    <p id="q82_result" class="correction"></p>
+</div>
+
+<!-- Question 83 -->
+<div class="question-card">
+    <p>83. Un des risques liés aux cookies publicitaires est :</p>
+    <div class="options">
+        <label><input type="radio" name="q83" value="0"> A. Ralentir l’ordinateur</label>
+        <label><input type="radio" name="q83" value="1"> B. Tracer vos habitudes de navigation à des fins commerciales</label>
+        <label><input type="radio" name="q83" value="0"> C. Empêcher l’accès aux sites</label>
+        <label><input type="radio" name="q83" value="0"> D. Forcer à changer de navigateur</label>
+    </div>
+    <p id="q83_result" class="correction"></p>
+</div>
+
+<!-- Question 84 -->
+<div class="question-card">
+    <p>84. Un VPN permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q84" value="0"> A. De supprimer les virus</label>
+        <label><input type="radio" name="q84" value="0"> B. De compresser les fichiers</label>
+        <label><input type="radio" name="q84" value="1"> C. De sécuriser et anonymiser la connexion à un réseau</label>
+        <label><input type="radio" name="q84" value="0"> D. De créer des mots de passe</label>
+    </div>
+    <p id="q84_result" class="correction"></p>
+</div>
+
+<!-- Question 85 -->
+<div class="question-card">
+    <p>85. Le mode "navigation privée" empêche :</p>
+    <div class="options">
+        <label><input type="radio" name="q85" value="0"> A. Les virus</label>
+        <label><input type="radio" name="q85" value="1"> B. L’enregistrement de l’historique local et des cookies</label>
+        <label><input type="radio" name="q85" value="0"> C. L’accès aux réseaux sociaux</label>
+        <label><input type="radio" name="q85" value="0"> D. Le téléchargement de fichiers</label>
+    </div>
+    <p id="q85_result" class="correction"></p>
+</div>
+
+<!-- Question 86 -->
+<div class="question-card">
+    <p>86. Les « traces mixtes » sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q86" value="0"> A. Des fichiers supprimés</label>
+        <label><input type="radio" name="q86" value="1"> B. Des données locales liées à des actions sur des sites distants</label>
+        <label><input type="radio" name="q86" value="0"> C. Des cookies obsolètes</label>
+        <label><input type="radio" name="q86" value="0"> D. Des SMS enregistrés</label>
+    </div>
+    <p id="q86_result" class="correction"></p>
+</div>
+
+<!-- Question 87 -->
+<div class="question-card">
+    <p>87. Qui a accès à votre historique de navigation via votre FAI ?</p>
+    <div class="options">
+        <label><input type="radio" name="q87" value="0"> A. Personne</label>
+        <label><input type="radio" name="q87" value="1"> B. Votre Fournisseur d’Accès à Internet (FAI)</label>
+        <label><input type="radio" name="q87" value="0"> C. Vos contacts</label>
+        <label><input type="radio" name="q87" value="0"> D. L’antivirus</label>
+    </div>
+    <p id="q87_result" class="correction"></p>
+</div>
+
+<!-- Question 88 -->
+<div class="question-card">
+    <p>88. Le "droit à l’oubli" numérique permet de :</p>
+    <div class="options">
+        <label><input type="radio" name="q88" value="0"> A. Supprimer des logiciels</label>
+        <label><input type="radio" name="q88" value="1"> B. Demander le retrait d’informations personnelles sur Internet</label>
+        <label><input type="radio" name="q88" value="0"> C. Éteindre son ordinateur à distance</label>
+        <label><input type="radio" name="q88" value="0"> D. Se déconnecter automatiquement du Wi-Fi</label>
+    </div>
+    <p id="q88_result" class="correction"></p>
+</div>
+
+<!-- Question 89 -->
+<div class="question-card">
+    <p>89. Une trace publique est :</p>
+    <div class="options">
+        <label><input type="radio" name="q89" value="0"> A. Un cookie expiré</label>
+        <label><input type="radio" name="q89" value="0"> B. Un fichier temporaire</label>
+        <label><input type="radio" name="q89" value="1"> C. Une publication visible par tout le monde sur Internet</label>
+        <label><input type="radio" name="q89" value="0"> D. Une clé USB partagée</label>
+    </div>
+    <p id="q89_result" class="correction"></p>
+</div>
+
+<!-- Question 90 -->
+<div class="question-card">
+    <p>90. Quelle mesure renforce la protection des données en Europe ?</p>
+    <div class="options">
+        <label><input type="radio" name="q90" value="0"> A. CNIL mondiale</label>
+        <label><input type="radio" name="q90" value="0"> B. Loi sur le cryptage</label>
+        <label><input type="radio" name="q90" value="1"> C. RGPD (Règlement Général sur la Protection des Données)</label>
+        <label><input type="radio" name="q90" value="0"> D. La double authentification</label>
+    </div>
+    <p id="q90_result" class="correction"></p>
+</div>
+
+<!-- Question 91 -->
+<div class="question-card">
+    <p>91. Depuis quand le RGPD est-il appliqué ?</p>
+    <div class="options">
+        <label><input type="radio" name="q91" value="0"> A. 2012</label>
+        <label><input type="radio" name="q91" value="0"> B. 2016</label>
+        <label><input type="radio" name="q91" value="1"> C. 25 mai 2018</label>
+        <label><input type="radio" name="q91" value="0"> D. 2020</label>
+    </div>
+    <p id="q91_result" class="correction"></p>
+</div>
+
+<!-- Question 92 -->
+<div class="question-card">
+    <p>92. Le RGPD impose le consentement :</p>
+    <div class="options">
+        <label><input type="radio" name="q92" value="0"> A. Oral seulement</label>
+        <label><input type="radio" name="q92" value="1"> B. Explicite et positif</label>
+        <label><input type="radio" name="q92" value="0"> C. Automatique via les cookies</label>
+        <label><input type="radio" name="q92" value="0"> D. Donné une seule fois pour toujours</label>
+    </div>
+    <p id="q92_result" class="correction"></p>
+</div>
+
+<!-- Question 93 -->
+<div class="question-card">
+    <p>93. Le RGPD est valable :</p>
+    <div class="options">
+        <label><input type="radio" name="q93" value="0"> A. Seulement en France</label>
+        <label><input type="radio" name="q93" value="1"> B. Pour toute entreprise traitant des données de citoyens européens</label>
+        <label><input type="radio" name="q93" value="0"> C. Uniquement pour les applications de l’État</label>
+        <label><input type="radio" name="q93" value="0"> D. Seulement sur Firefox</label>
+    </div>
+    <p id="q93_result" class="correction"></p>
+</div>
+
+<!-- Question 94 -->
+<div class="question-card">
+    <p>94. Une des obligations du RGPD est :</p>
+    <div class="options">
+        <label><input type="radio" name="q94" value="0"> A. Interdire Internet aux mineurs</label>
+        <label><input type="radio" name="q94" value="0"> B. Afficher tous les mots de passe</label>
+        <label><input type="radio" name="q94" value="1"> C. Notifier les fuites de données</label>
+        <label><input type="radio" name="q94" value="0"> D. Supprimer les cookies automatiquement</label>
+    </div>
+    <p id="q94_result" class="correction"></p>
+</div>
+
+<!-- Question 95 -->
+<div class="question-card">
+    <p>95. Exemple de plateforme collectant vos données personnelles :</p>
+    <div class="options">
+        <label><input type="radio" name="q95" value="0"> A. VLC</label>
+        <label><input type="radio" name="q95" value="1"> B. Facebook</label>
+        <label><input type="radio" name="q95" value="0"> C. LibreOffice</label>
+        <label><input type="radio" name="q95" value="0"> D. 7-Zip</label>
+    </div>
+    <p id="q95_result" class="correction"></p>
+</div>
+
+<!-- Question 96 -->
+<div class="question-card">
+    <p>96. L’e-réputation correspond à :</p>
+    <div class="options">
+        <label><input type="radio" name="q96" value="0"> A. Une adresse email</label>
+        <label><input type="radio" name="q96" value="1"> B. L’image qu’on donne de soi sur Internet</label>
+        <label><input type="radio" name="q96" value="0"> C. Une carte bancaire virtuelle</label>
+        <label><input type="radio" name="q96" value="0"> D. Une archive personnelle</label>
+    </div>
+    <p id="q96_result" class="correction"></p>
+</div>
+
+<!-- Question 97 -->
+<div class="question-card">
+    <p>97. Les cookies de préférences servent à :</p>
+    <div class="options">
+        <label><input type="radio" name="q97" value="0"> A. Créer des virus</label>
+        <label><input type="radio" name="q97" value="1"> B. Retenir vos choix sur un site Web</label>
+        <label><input type="radio" name="q97" value="0"> C. Vérifier votre email</label>
+        <label><input type="radio" name="q97" value="0"> D. Protéger vos données bancaires</label>
+    </div>
+    <p id="q97_result" class="correction"></p>
+</div>
+
+<!-- Question 98 -->
+<div class="question-card">
+    <p>98. Le VPN d’une entreprise permet à l’utilisateur :</p>
+    <div class="options">
+        <label><input type="radio" name="q98" value="0"> A. D’accéder à Netflix en cachette</label>
+        <label><input type="radio" name="q98" value="0"> B. D’être anonyme sur tous les réseaux</label>
+        <label><input type="radio" name="q98" value="1"> C. D'accéder à distance comme s’il était dans l’entreprise</label>
+        <label><input type="radio" name="q98" value="0"> D. De créer une blockchain</label>
+    </div>
+    <p id="q98_result" class="correction"></p>
+</div>
+
+<!-- Question 99 -->
+<div class="question-card">
+    <p>99. Quel est un risque des services VPN gratuits ?</p>
+    <div class="options">
+        <label><input type="radio" name="q99" value="0"> A. Ils sont trop chers</label>
+        <label><input type="radio" name="q99" value="0"> B. Ils accélèrent trop Internet</label>
+        <label><input type="radio" name="q99" value="1"> C. Ils peuvent vendre vos données personnelles</label>
+        <label><input type="radio" name="q99" value="0"> D. Ils suppriment les emails</label>
+    </div>
+    <p id="q99_result" class="correction"></p>
+</div>
+
+<!-- Question 100 -->
+<div class="question-card">
+    <p>100. En navigation VPN “accès total” :</p>
+    <div class="options">
+        <label><input type="radio" name="q100" value="0"> A. Seuls les sites de l'entreprise sont visibles</label>
+        <label><input type="radio" name="q100" value="1"> B. Tout le trafic Internet passe par le réseau de l’entreprise</label>
+        <label><input type="radio" name="q100" value="0"> C. Seul le Wi-Fi public est activé</label>
+        <label><input type="radio" name="q100" value="0"> D. Les cookies sont automatiquement bloqués</label>
+    </div>
+    <p id="q100_result" class="correction"></p>
+</div>
+
+
+<input type="button" value="Vérifier le score Thème 5" onclick="checkScore(81,100,'result5')">
+    <p id="result5"></p>
+</div>
+
+<div class="theme theme6">
+    <h2>Thème 6 : Qualité de l&#39;information, sources, fake news</h2>
+
+<!-- Question 101 -->
+<div class="question-card">
+    <p>101. Une source d’information collaborative est :</p>
+    <div class="options">
+        <label><input type="radio" name="q101" value="0"> A. Un rapport gouvernemental</label>
+        <label><input type="radio" name="q101" value="1"> B. Wikipédia</label>
+        <label><input type="radio" name="q101" value="0"> C. Un SMS officiel</label>
+        <label><input type="radio" name="q101" value="0"> D. Un rapport d’expert</label>
+    </div>
+    <p id="q101_result" class="correction"></p>
+</div>
+
+<!-- Question 102 -->
+<div class="question-card">
+    <p>102. Les fake news sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q102" value="0"> A. Des documents juridiques</label>
+        <label><input type="radio" name="q102" value="1"> B. Des fausses informations diffusées comme vraies</label>
+        <label><input type="radio" name="q102" value="0"> C. Des fichiers virus</label>
+        <label><input type="radio" name="q102" value="0"> D. Des signatures électroniques</label>
+    </div>
+    <p id="q102_result" class="correction"></p>
+</div>
+
+<!-- Question 103 -->
+<div class="question-card">
+    <p>103. Une guerre d’édition sur Wikipédia se produit quand :</p>
+    <div class="options">
+        <label><input type="radio" name="q103" value="0"> A. Un serveur est attaqué</label>
+        <label><input type="radio" name="q103" value="1"> B. Des utilisateurs modifient en boucle un contenu pour défendre une opinion</label>
+        <label><input type="radio" name="q103" value="0"> C. Le site plante</label>
+        <label><input type="radio" name="q103" value="0"> D. Les images sont floues</label>
+    </div>
+    <p id="q103_result" class="correction"></p>
+</div>
+
+<!-- Question 104 -->
+<div class="question-card">
+    <p>104. Un hoax est :</p>
+    <div class="options">
+        <label><input type="radio" name="q104" value="0"> A. Un type de malware</label>
+        <label><input type="radio" name="q104" value="1"> B. Une rumeur ou une fausse alerte</label>
+        <label><input type="radio" name="q104" value="0"> C. Un compte vérifié</label>
+        <label><input type="radio" name="q104" value="0"> D. Une adresse IP privée</label>
+    </div>
+    <p id="q104_result" class="correction"></p>
+</div>
+
+<!-- Question 105 -->
+<div class="question-card">
+    <p>105. La validation par les pairs concerne :</p>
+    <div class="options">
+        <label><input type="radio" name="q105" value="0"> A. Les cookies</label>
+        <label><input type="radio" name="q105" value="0"> B. Les moteurs de recherche</label>
+        <label><input type="radio" name="q105" value="1"> C. Les publications scientifiques</label>
+        <label><input type="radio" name="q105" value="0"> D. Les serveurs DNS</label>
+    </div>
+    <p id="q105_result" class="correction"></p>
+</div>
+
+<!-- Question 106 -->
+<div class="question-card">
+    <p>106. Un article en « preprint » signifie :</p>
+    <div class="options">
+        <label><input type="radio" name="q106" value="0"> A. Il est imprimé sur papier</label>
+        <label><input type="radio" name="q106" value="1"> B. Il n’a pas encore été validé par les pairs</label>
+        <label><input type="radio" name="q106" value="0"> C. Il est vérifié par Facebook</label>
+        <label><input type="radio" name="q106" value="0"> D. Il est traduit automatiquement</label>
+    </div>
+    <p id="q106_result" class="correction"></p>
+</div>
+
+<!-- Question 107 -->
+<div class="question-card">
+    <p>107. Les biais de confirmation nous poussent à :</p>
+    <div class="options">
+        <label><input type="radio" name="q107" value="0"> A. Oublier l’information</label>
+        <label><input type="radio" name="q107" value="1"> B. Chercher des infos qui confirment nos idées existantes</label>
+        <label><input type="radio" name="q107" value="0"> C. Refuser tous les résultats de recherche</label>
+        <label><input type="radio" name="q107" value="0"> D. Écrire nos propres articles</label>
+    </div>
+    <p id="q107_result" class="correction"></p>
+</div>
+
+<!-- Question 108 -->
+<div class="question-card">
+    <p>108. La « bulle de filtre » désigne :</p>
+    <div class="options">
+        <label><input type="radio" name="q108" value="0"> A. Un pare-feu Internet</label>
+        <label><input type="radio" name="q108" value="1"> B. Un isolement intellectuel lié à la personnalisation des contenus</label>
+        <label><input type="radio" name="q108" value="0"> C. Une option des VPN</label>
+        <label><input type="radio" name="q108" value="0"> D. Une fausse information virale</label>
+    </div>
+    <p id="q108_result" class="correction"></p>
+</div>
+
+<!-- Question 109 -->
+<div class="question-card">
+    <p>109. Le biais de confirmation est renforcé par :</p>
+    <div class="options">
+        <label><input type="radio" name="q109" value="0"> A. La météo</label>
+        <label><input type="radio" name="q109" value="1"> B. Les algorithmes de recommandation</label>
+        <label><input type="radio" name="q109" value="0"> C. Les cryptomonnaies</label>
+        <label><input type="radio" name="q109" value="0"> D. Les antivirus</label>
+    </div>
+    <p id="q109_result" class="correction"></p>
+</div>
+
+<!-- Question 110 -->
+<div class="question-card">
+    <p>110. Une information de qualité dépend :</p>
+    <div class="options">
+        <label><input type="radio" name="q110" value="0"> A. Du moteur de recherche utilisé</label>
+        <label><input type="radio" name="q110" value="1"> B. Du contexte, de l’auteur, et de la source</label>
+        <label><input type="radio" name="q110" value="0"> C. De sa date seulement</label>
+        <label><input type="radio" name="q110" value="0"> D. De sa longueur</label>
+    </div>
+    <p id="q110_result" class="correction"></p>
+</div>
+
+<!-- Question 111 -->
+<div class="question-card">
+    <p>111. Les fake news sur Facebook incluent :</p>
+    <div class="options">
+        <label><input type="radio" name="q111" value="0"> A. Des mises à jour officielles</label>
+        <label><input type="radio" name="q111" value="1"> B. Des fausses pages jouant sur l’émotion pour collecter des "likes"</label>
+        <label><input type="radio" name="q111" value="0"> C. Des documents certifiés</label>
+        <label><input type="radio" name="q111" value="0"> D. Des publications scientifiques</label>
+    </div>
+    <p id="q111_result" class="correction"></p>
+</div>
+
+<!-- Question 112 -->
+<div class="question-card">
+    <p>112. Une page qui demande de “copier-coller pour protéger vos données Facebook” est :</p>
+    <div class="options">
+        <label><input type="radio" name="q112" value="0"> A. Officielle</label>
+        <label><input type="radio" name="q112" value="0"> B. Juridiquement efficace</label>
+        <label><input type="radio" name="q112" value="1"> C. Une arnaque / fausse information</label>
+        <label><input type="radio" name="q112" value="0"> D. Un message de sécurité Facebook</label>
+    </div>
+    <p id="q112_result" class="correction"></p>
+</div>
+
+<!-- Question 113 -->
+<div class="question-card">
+    <p>113. Les sources informelles sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q113" value="0"> A. Les bases de données d’État</label>
+        <label><input type="radio" name="q113" value="1"> B. Les blogs, réseaux sociaux, vidéos YouTube, etc.</label>
+        <label><input type="radio" name="q113" value="0"> C. Les journaux papier uniquement</label>
+        <label><input type="radio" name="q113" value="0"> D. Les documents PDF officiels</label>
+    </div>
+    <p id="q113_result" class="correction"></p>
+</div>
+
+<!-- Question 114 -->
+<div class="question-card">
+    <p>114. Les revues prédatrices :</p>
+    <div class="options">
+        <label><input type="radio" name="q114" value="0"> A. Ont des frais d’impression élevés</label>
+        <label><input type="radio" name="q114" value="1"> B. Acceptent tout article contre paiement, sans vraie relecture</label>
+        <label><input type="radio" name="q114" value="0"> C. Sont uniquement disponibles en anglais</label>
+        <label><input type="radio" name="q114" value="0"> D. Sont interdites en Europe</label>
+    </div>
+    <p id="q114_result" class="correction"></p>
+</div>
+
+<!-- Question 115 -->
+<div class="question-card">
+    <p>115. La fraîcheur de l'information est importante pour :</p>
+    <div class="options">
+        <label><input type="radio" name="q115" value="0"> A. Supprimer les cookies</label>
+        <label><input type="radio" name="q115" value="1"> B. Vérifier que les données sont toujours valables</label>
+        <label><input type="radio" name="q115" value="0"> C. Analyser un virus</label>
+        <label><input type="radio" name="q115" value="0"> D. Choisir une imprimante</label>
+    </div>
+    <p id="q115_result" class="correction"></p>
+</div>
+
+<!-- Question 116 -->
+<div class="question-card">
+    <p>116. Un contenu complotiste utilise souvent :</p>
+    <div class="options">
+        <label><input type="radio" name="q116" value="0"> A. Des données scientifiques sourcées</label>
+        <label><input type="radio" name="q116" value="1"> B. Des sources anonymes, floues et émotionnelles</label>
+        <label><input type="radio" name="q116" value="0"> C. Des vidéos pédagogiques certifiées</label>
+        <label><input type="radio" name="q116" value="0"> D. Des lois officielles</label>
+    </div>
+    <p id="q116_result" class="correction"></p>
+</div>
+
+<!-- Question 117 -->
+<div class="question-card">
+    <p>117. Lors d’une évaluation de site, on vérifie :</p>
+    <div class="options">
+        <label><input type="radio" name="q117" value="0"> A. La couleur du fond</label>
+        <label><input type="radio" name="q117" value="0"> B. Le nombre de GIFs</label>
+        <label><input type="radio" name="q117" value="1"> C. L’auteur, la date, la source et l’objectif</label>
+        <label><input type="radio" name="q117" value="0"> D. Le nombre de “likes”</label>
+    </div>
+    <p id="q117_result" class="correction"></p>
+</div>
+
+<!-- Question 118 -->
+<div class="question-card">
+    <p>118. Un site fiable propose généralement :</p>
+    <div class="options">
+        <label><input type="radio" name="q118" value="0"> A. Des publicités clignotantes</label>
+        <label><input type="radio" name="q118" value="1"> B. Des sources citées, des auteurs identifiés, un contenu structuré</label>
+        <label><input type="radio" name="q118" value="0"> C. Des vidéos en boucle</label>
+        <label><input type="radio" name="q118" value="0"> D. Des commentaires anonymes</label>
+    </div>
+    <p id="q118_result" class="correction"></p>
+</div>
+
+<!-- Question 119 -->
+<div class="question-card">
+    <p>119. Lors d’un débat politique, Wikipédia peut :</p>
+    <div class="options">
+        <label><input type="radio" name="q119" value="0"> A. Publier une vidéo officielle</label>
+        <label><input type="radio" name="q119" value="1"> B. Être modifié par les partisans de chaque camp</label>
+        <label><input type="radio" name="q119" value="0"> C. Être inaccessible par décision politique</label>
+        <label><input type="radio" name="q119" value="0"> D. Remplacer les journaux</label>
+    </div>
+    <p id="q119_result" class="correction"></p>
+</div>
+
+<!-- Question 120 -->
+<div class="question-card">
+    <p>120. Le but d’une veille informationnelle est de :</p>
+    <div class="options">
+        <label><input type="radio" name="q120" value="0"> A. Supprimer des contenus dangereux</label>
+        <label><input type="radio" name="q120" value="1"> B. Se tenir informé de manière efficace dans son domaine</label>
+        <label><input type="radio" name="q120" value="0"> C. Bloquer les cookies</label>
+        <label><input type="radio" name="q120" value="0"> D. Détecter les failles système</label>
+    </div>
+    <p id="q120_result" class="correction"></p>
+</div>
+
+
+ <input type="button" value="Vérifier le score Thème 6" onclick="checkScore(101,120,'result6')">
+    <p id="result6"></p>
+</div>
+
+<div class="theme theme7">
+    <h2>Thème 7 : Systèmes de recommandation, IA, deepfakes et reconnaissance faciale</h2>
+
+<!-- Question 121 -->
+<div class="question-card">
+    <p>121. Un système de recommandation vise à :</p>
+    <div class="options">
+        <label><input type="radio" name="q121" value="0"> A. Interdire des contenus</label>
+        <label><input type="radio" name="q121" value="1"> B. Proposer du contenu susceptible de plaire à l’utilisateur</label>
+        <label><input type="radio" name="q121" value="0"> C. Écrire des articles automatiquement</label>
+        <label><input type="radio" name="q121" value="0"> D. Supprimer les données inutiles</label>
+    </div>
+    <p id="q121_result" class="correction"></p>
+</div>
+
+<!-- Question 122 -->
+<div class="question-card">
+    <p>122. Un des objectifs des algorithmes de recommandation est :</p>
+    <div class="options">
+        <label><input type="radio" name="q122" value="0"> A. Réduire les publicités</label>
+        <label><input type="radio" name="q122" value="0"> B. Supprimer les messages privés</label>
+        <label><input type="radio" name="q122" value="1"> C. Maintenir l’utilisateur engagé sur la plateforme</label>
+        <label><input type="radio" name="q122" value="0"> D. Traduire les pages Web</label>
+    </div>
+    <p id="q122_result" class="correction"></p>
+</div>
+
+<!-- Question 123 -->
+<div class="question-card">
+    <p>123. Les bulles de filtres peuvent provoquer :</p>
+    <div class="options">
+        <label><input type="radio" name="q123" value="0"> A. Une meilleure sécurité réseau</label>
+        <label><input type="radio" name="q123" value="1"> B. Un isolement intellectuel</label>
+        <label><input type="radio" name="q123" value="0"> C. Une chute des cours de bourse</label>
+        <label><input type="radio" name="q123" value="0"> D. Une hausse de la bande passante</label>
+    </div>
+    <p id="q123_result" class="correction"></p>
+</div>
+
+<!-- Question 124 -->
+<div class="question-card">
+    <p>124. Le biais de confirmation est accentué par :</p>
+    <div class="options">
+        <label><input type="radio" name="q124" value="0"> A. Le Bluetooth</label>
+        <label><input type="radio" name="q124" value="1"> B. Les recommandations personnalisées basées sur les préférences passées</label>
+        <label><input type="radio" name="q124" value="0"> C. Les signatures numériques</label>
+        <label><input type="radio" name="q124" value="0"> D. Les antivirus</label>
+    </div>
+    <p id="q124_result" class="correction"></p>
+</div>
+
+<!-- Question 125 -->
+<div class="question-card">
+    <p>125. DeepFace est un système de :</p>
+    <div class="options">
+        <label><input type="radio" name="q125" value="0"> A. Cryptage des visages</label>
+        <label><input type="radio" name="q125" value="1"> B. Reconnaissance faciale développé par Facebook</label>
+        <label><input type="radio" name="q125" value="0"> C. Filtrage de cookies</label>
+        <label><input type="radio" name="q125" value="0"> D. Contrôle parental</label>
+    </div>
+    <p id="q125_result" class="correction"></p>
+</div>
+
+<!-- Question 126 -->
+<div class="question-card">
+    <p>126. Le deepfake est :</p>
+    <div class="options">
+        <label><input type="radio" name="q126" value="0"> A. Une extension de navigateur</label>
+        <label><input type="radio" name="q126" value="1"> B. Une vidéo falsifiée par intelligence artificielle</label>
+        <label><input type="radio" name="q126" value="0"> C. Un protocole réseau</label>
+        <label><input type="radio" name="q126" value="0"> D. Un outil d’hameçonnage</label>
+    </div>
+    <p id="q126_result" class="correction"></p>
+</div>
+
+<!-- Question 127 -->
+<div class="question-card">
+    <p>127. L’intelligence artificielle (IA) vise à :</p>
+    <div class="options">
+        <label><input type="radio" name="q127" value="0"> A. Supprimer les cookies</label>
+        <label><input type="radio" name="q127" value="1"> B. Réaliser des tâches “intelligentes” par des calculs informatiques</label>
+        <label><input type="radio" name="q127" value="0"> C. Créer des virus</label>
+        <label><input type="radio" name="q127" value="0"> D. Créer des VPN</label>
+    </div>
+    <p id="q127_result" class="correction"></p>
+</div>
+
+<!-- Question 128 -->
+<div class="question-card">
+    <p>128. Le deep learning est :</p>
+    <div class="options">
+        <label><input type="radio" name="q128" value="0"> A. Un jeu vidéo</label>
+        <label><input type="radio" name="q128" value="0"> B. Une méthode de sauvegarde</label>
+        <label><input type="radio" name="q128" value="1"> C. Une technique d’IA basée sur des réseaux de neurones profonds</label>
+        <label><input type="radio" name="q128" value="0"> D. Une fonction d'impression</label>
+    </div>
+    <p id="q128_result" class="correction"></p>
+</div>
+
+<!-- Question 129 -->
+<div class="question-card">
+    <p>129. Les deepfakes posent problème car :</p>
+    <div class="options">
+        <label><input type="radio" name="q129" value="0"> A. Ils ralentissent le Wi-Fi</label>
+        <label><input type="radio" name="q129" value="0"> B. Ils empêchent les mises à jour</label>
+        <label><input type="radio" name="q129" value="1"> C. Ils rendent difficile la distinction entre vrai et faux dans les vidéos</label>
+        <label><input type="radio" name="q129" value="0"> D. Ils bloquent les cookies</label>
+    </div>
+    <p id="q129_result" class="correction"></p>
+</div>
+
+<!-- Question 130 -->
+<div class="question-card">
+    <p>130. Quelle technologie est utilisée dans la reconnaissance faciale ?</p>
+    <div class="options">
+        <label><input type="radio" name="q130" value="0"> A. VPN</label>
+        <label><input type="radio" name="q130" value="1"> B. IA et big data (apprentissage sur grandes bases d’images)</label>
+        <label><input type="radio" name="q130" value="0"> C. SSL</label>
+        <label><input type="radio" name="q130" value="0"> D. Firewall</label>
+    </div>
+    <p id="q130_result" class="correction"></p>
+</div>
+
+<!-- Question 131 -->
+<div class="question-card">
+    <p>131. La reconnaissance faciale peut poser des problèmes :</p>
+    <div class="options">
+        <label><input type="radio" name="q131" value="0"> A. D’humour</label>
+        <label><input type="radio" name="q131" value="0"> B. De traduction</label>
+        <label><input type="radio" name="q131" value="1"> C. D’éthique et de vie privée</label>
+        <label><input type="radio" name="q131" value="0"> D. De bande passante</label>
+    </div>
+    <p id="q131_result" class="correction"></p>
+</div>
+
+<!-- Question 132 -->
+<div class="question-card">
+    <p>132. Le projet VSA (vidéo surveillance algorithmique) en France est lié à :</p>
+    <div class="options">
+        <label><input type="radio" name="q132" value="0"> A. La blockchain</label>
+        <label><input type="radio" name="q132" value="1"> B. L’analyse automatique d’images dans les lieux publics</label>
+        <label><input type="radio" name="q132" value="0"> C. La météo</label>
+        <label><input type="radio" name="q132" value="0"> D. La gestion du RGPD</label>
+    </div>
+    <p id="q132_result" class="correction"></p>
+</div>
+
+<!-- Question 133 -->
+<div class="question-card">
+    <p>133. Quel acteur a influencé le cours du Bitcoin par de simples tweets ?</p>
+    <div class="options">
+        <label><input type="radio" name="q133" value="0"> A. Jeff Bezos</label>
+        <label><input type="radio" name="q133" value="1"> B. Elon Musk</label>
+        <label><input type="radio" name="q133" value="0"> C. Bill Gates</label>
+        <label><input type="radio" name="q133" value="0"> D. Edward Snowden</label>
+    </div>
+    <p id="q133_result" class="correction"></p>
+</div>
+
+<!-- Question 134 -->
+<div class="question-card">
+    <p>134. Un deepfake crédible peut :</p>
+    <div class="options">
+        <label><input type="radio" name="q134" value="0"> A. Avoir une signature numérique vérifiable</label>
+        <label><input type="radio" name="q134" value="0"> B. Être automatiquement bloqué</label>
+        <label><input type="radio" name="q134" value="1"> C. Être pris à tort pour une vraie vidéo</label>
+        <label><input type="radio" name="q134" value="0"> D. Être diffusé uniquement sur le darknet</label>
+    </div>
+    <p id="q134_result" class="correction"></p>
+</div>
+
+<!-- Question 135 -->
+<div class="question-card">
+    <p>135. Une IA peut être entraînée à reconnaître :</p>
+    <div class="options">
+        <label><input type="radio" name="q135" value="0"> A. Seulement des textes</label>
+        <label><input type="radio" name="q135" value="0"> B. Des mots de passe</label>
+        <label><input type="radio" name="q135" value="1"> C. Des visages, des sons, des comportements, etc.</label>
+        <label><input type="radio" name="q135" value="0"> D. Des sauvegardes de fichiers</label>
+    </div>
+    <p id="q135_result" class="correction"></p>
+</div>
+
+<!-- Question 136 -->
+<div class="question-card">
+    <p>136. Quel type de données est essentiel au fonctionnement de l’IA ?</p>
+    <div class="options">
+        <label><input type="radio" name="q136" value="0"> A. Des mots de passe cryptés</label>
+        <label><input type="radio" name="q136" value="0"> B. Des cookies</label>
+        <label><input type="radio" name="q136" value="1"> C. De grandes quantités d’exemples appelées “big data”</label>
+        <label><input type="radio" name="q136" value="0"> D. Des protocoles réseau</label>
+    </div>
+    <p id="q136_result" class="correction"></p>
+</div>
+
+<!-- Question 137 -->
+<div class="question-card">
+    <p>137. Quel danger existe avec des lunettes à réalité augmentée couplées à une IA ?</p>
+    <div class="options">
+        <label><input type="radio" name="q137" value="0"> A. Effacement de données personnelles</label>
+        <label><input type="radio" name="q137" value="1"> B. Collecte automatisée d’informations biométriques</label>
+        <label><input type="radio" name="q137" value="0"> C. Épuisement du réseau</label>
+        <label><input type="radio" name="q137" value="0"> D. Suppression automatique des publications</label>
+    </div>
+    <p id="q137_result" class="correction"></p>
+</div>
+
+<!-- Question 138 -->
+<div class="question-card">
+    <p>138. Quelle IA a été utilisée pour créer des vidéos modifiées d’un TikTokeur américain en Tom Cruise ?</p>
+    <div class="options">
+        <label><input type="radio" name="q138" value="0"> A. Alexa</label>
+        <label><input type="radio" name="q138" value="0"> B. Watson</label>
+        <label><input type="radio" name="q138" value="1"> C. Un deepfake (IA vidéo)</label>
+        <label><input type="radio" name="q138" value="0"> D. Siri</label>
+    </div>
+    <p id="q138_result" class="correction"></p>
+</div>
+
+<!-- Question 139 -->
+<div class="question-card">
+    <p>139. Quel problème pose une IA d’identification faciale non régulée ?</p>
+    <div class="options">
+        <label><input type="radio" name="q139" value="0"> A. Consomme trop de cookies</label>
+        <label><input type="radio" name="q139" value="1"> B. Peut être utilisée à des fins de surveillance massive ou injustifiée</label>
+        <label><input type="radio" name="q139" value="0"> C. Rend les vidéos lentes</label>
+        <label><input type="radio" name="q139" value="0"> D. Empêche de se connecter à Facebook</label>
+    </div>
+    <p id="q139_result" class="correction"></p>
+</div>
+
+<!-- Question 140 -->
+<div class="question-card">
+    <p>140. Une IA de recommandation peut affecter :</p>
+    <div class="options">
+        <label><input type="radio" name="q140" value="0"> A. L’antivirus</label>
+        <label><input type="radio" name="q140" value="1"> B. Le type d'information qu’on reçoit (et donc notre vision du monde)</label>
+        <label><input type="radio" name="q140" value="0"> C. La taille de l’écran</label>
+        <label><input type="radio" name="q140" value="0"> D. La consommation électrique</label>
+    </div>
+    <p id="q140_result" class="correction"></p>
+</div>
+
+
+<input type="button" value="Vérifier le score Thème 7" onclick="checkScore(121,140,'result7')">
+    <p id="result7"></p>
+</div>
+
+<div class="theme theme8">
+    <h2>Tous les thèmes </h2>
+
+    <!-- Question 1 -->
+    <div class="question-card">
+        <p>1. Quelle est la première protection d’accès aux données selon le cours ?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="0"> A. Le cryptage</label>
+            <label><input type="radio" name="q1" value="0"> B. Le firewall</label>
+            <label><input type="radio" name="q1" value="1"> C. Le mot de passe</label>
+            <label><input type="radio" name="q1" value="0"> D. La signature numérique</label>
+        </div>
+        <p id="q1_result" class="correction"></p>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-card">
+        <p>2. Un bon mot de passe doit :</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="0"> A. Être court</label>
+            <label><input type="radio" name="q2" value="0"> B. Contenir uniquement des lettres</label>
+            <label><input type="radio" name="q2" value="1"> C. Être long et complexe</label>
+            <label><input type="radio" name="q2" value="0"> D. Être identique pour tous les comptes</label>
+        </div>
+        <p id="q2_result" class="correction"></p>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-card">
+        <p>3. Quelle menace utilise des faux sites ou emails pour voler des informations ?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="0"> A. Ransomware</label>
+            <label><input type="radio" name="q3" value="0"> B. Spyware</label>
+            <label><input type="radio" name="q3" value="1"> C. Phishing</label>
+            <label><input type="radio" name="q3" value="0"> D. Worm</label>
+        </div>
+        <p id="q3_result" class="correction"></p>
+    </div>
+
+<!-- Question 4 -->
+<div class="question-card">
+    <p>4. L’authentification à deux facteurs ajoute à l’identifiant/mot de passe :</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="0"> A. Une image de sécurité</label>
+        <label><input type="radio" name="q4" value="0"> B. Une deuxième adresse e-mail</label>
+        <label><input type="radio" name="q4" value="1"> C. Un code envoyé ou une biométrie</label>
+        <label><input type="radio" name="q4" value="0"> D. Une signature manuscrite</label>
+    </div>
+    <p id="q4_result" class="correction"></p>
+</div>
+
+<!-- Question 5 -->
+<div class="question-card">
+    <p>5. Le mot de passe « 123456 » est un exemple de :</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="0"> A. Bon mot de passe</label>
+        <label><input type="radio" name="q5" value="0"> B. Mot de passe fort</label>
+        <label><input type="radio" name="q5" value="1"> C. Mot de passe courant donc dangereux</label>
+        <label><input type="radio" name="q5" value="0"> D. Clé cryptographique</label>
+    </div>
+    <p id="q5_result" class="correction"></p>
+</div>
+
+<!-- Question 6 -->
+<div class="question-card">
+    <p>6. Un cheval de Troie est :</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="0"> A. Un outil antivirus</label>
+        <label><input type="radio" name="q6" value="0"> B. Une méthode de sauvegarde</label>
+        <label><input type="radio" name="q6" value="1"> C. Un programme malveillant caché</label>
+        <label><input type="radio" name="q6" value="0"> D. Une extension de navigateur</label>
+    </div>
+    <p id="q6_result" class="correction"></p>
+</div>
+
+<!-- Question 7 -->
+<div class="question-card">
+    <p>7. Le ransomware a pour but de :</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="0"> A. Vendre des produits en ligne</label>
+        <label><input type="radio" name="q7" value="0"> B. Améliorer la sécurité du système</label>
+        <label><input type="radio" name="q7" value="1"> C. Crypter les données et demander une rançon</label>
+        <label><input type="radio" name="q7" value="0"> D. Supprimer automatiquement les virus</label>
+    </div>
+    <p id="q7_result" class="correction"></p>
+</div>
+
+<!-- Question 8 -->
+<div class="question-card">
+    <p>8. Quelle pratique réduit les risques avec des logiciels ?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="0"> A. Télécharger tout depuis Google</label>
+        <label><input type="radio" name="q8" value="0"> B. Utiliser des logiciels piratés</label>
+        <label><input type="radio" name="q8" value="1"> C. Faire les mises à jour régulièrement</label>
+        <label><input type="radio" name="q8" value="0"> D. Installer des versions obsolètes</label>
+    </div>
+    <p id="q8_result" class="correction"></p>
+</div>
+
+<!-- Question 9 -->
+<div class="question-card">
+    <p>9. Le CERT-FR est :</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="0"> A. Un antivirus gratuit</label>
+        <label><input type="radio" name="q9" value="0"> B. Une base de données d’images</label>
+        <label><input type="radio" name="q9" value="1"> C. Le site officiel d’alerte en cybersécurité en France</label>
+        <label><input type="radio" name="q9" value="0"> D. Une entreprise de cryptomonnaie</label>
+    </div>
+    <p id="q9_result" class="correction"></p>
+</div>
+
+<!-- Question 10 -->
+<div class="question-card">
+    <p>10. Que permet un pare-feu (firewall) ?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="0"> A. Augmenter la vitesse Internet</label>
+        <label><input type="radio" name="q10" value="1"> B. Bloquer les tentatives d’intrusion</label>
+        <label><input type="radio" name="q10" value="0"> C. Créer des mots de passe forts</label>
+        <label><input type="radio" name="q10" value="0"> D. Définir les droits d’administration</label>
+    </div>
+    <p id="q10_result" class="correction"></p>
+</div>
+
+    <!-- Question 11 -->
+<div class="question-card">
+    <p>11. Quelle extension malveillante était associée à un virus Facebook ?</p>
+    <div class="options">
+        <label><input type="radio" name="q11" value="0"> A. Pika</label>
+        <label><input type="radio" name="q11" value="0"> B. CryptoGuard</label>
+        <label><input type="radio" name="q11" value="1"> C. Eko</label>
+        <label><input type="radio" name="q11" value="0"> D. Facelock</label>
+    </div>
+    <p id="q11_result" class="correction"></p>
+</div>
+
+<!-- Question 12 -->
+<div class="question-card">
+    <p>12. Une clé USB piégée peut :</p>
+    <div class="options">
+        <label><input type="radio" name="q12" value="0"> A. Nettoyer l’ordinateur</label>
+        <label><input type="radio" name="q12" value="0"> B. Installer un système Linux</label>
+        <label><input type="radio" name="q12" value="1"> C. Infecter un ordinateur sans action de l’utilisateur</label>
+        <label><input type="radio" name="q12" value="0"> D. Être sans danger si non ouverte</label>
+    </div>
+    <p id="q12_result" class="correction"></p>
+</div>
+
+<!-- Question 13 -->
+<div class="question-card">
+    <p>13. Le « salage » d’un mot de passe permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q13" value="0"> A. De le rendre plus savoureux</label>
+        <label><input type="radio" name="q13" value="0"> B. De le rendre plus court</label>
+        <label><input type="radio" name="q13" value="1"> C. D’augmenter sa complexité et d’éviter les doublons de hash</label>
+        <label><input type="radio" name="q13" value="0"> D. D’ajouter une photo de sécurité</label>
+    </div>
+    <p id="q13_result" class="correction"></p>
+</div>
+
+<!-- Question 14 -->
+<div class="question-card">
+    <p>14. Un « botnet » est :</p>
+    <div class="options">
+        <label><input type="radio" name="q14" value="0"> A. Un serveur de données</label>
+        <label><input type="radio" name="q14" value="1"> B. Une machine zombie contrôlée à distance</label>
+        <label><input type="radio" name="q14" value="0"> C. Un antivirus mal configuré</label>
+        <label><input type="radio" name="q14" value="0"> D. Un outil d’optimisation de réseau</label>
+    </div>
+    <p id="q14_result" class="correction"></p>
+</div>
+
+<!-- Question 15 -->
+<div class="question-card">
+    <p>15. Un fichier marqué comme immutable sous Linux :</p>
+    <div class="options">
+        <label><input type="radio" name="q15" value="0"> A. Peut être modifié seulement par root</label>
+        <label><input type="radio" name="q15" value="1"> B. Est visible mais non modifiable, même par root</label>
+        <label><input type="radio" name="q15" value="0"> C. Est compressé automatiquement</label>
+        <label><input type="radio" name="q15" value="0"> D. Est un fichier vidéo protégé</label>
+    </div>
+    <p id="q15_result" class="correction"></p>
+</div>
+
+<!-- Question 16 -->
+<div class="question-card">
+    <p>16. Un bon mot de passe ne doit pas contenir :</p>
+    <div class="options">
+        <label><input type="radio" name="q16" value="0"> A. Des chiffres</label>
+        <label><input type="radio" name="q16" value="0"> B. Des caractères spéciaux</label>
+        <label><input type="radio" name="q16" value="1"> C. Des mots du dictionnaire</label>
+        <label><input type="radio" name="q16" value="0"> D. Une majuscule</label>
+    </div>
+    <p id="q16_result" class="correction"></p>
+</div>
+
+<!-- Question 17 -->
+<div class="question-card">
+    <p>17. Que protège une signature numérique ?</p>
+    <div class="options">
+        <label><input type="radio" name="q17" value="0"> A. L’accès à Internet</label>
+        <label><input type="radio" name="q17" value="1"> B. L’identité du signataire et l’intégrité du document</label>
+        <label><input type="radio" name="q17" value="0"> C. Les données bancaires</label>
+        <label><input type="radio" name="q17" value="0"> D. Le code source d’un site</label>
+    </div>
+    <p id="q17_result" class="correction"></p>
+</div>
+
+<!-- Question 18 -->
+<div class="question-card">
+    <p>18. Quel est l’un des risques principaux du phishing ?</p>
+    <div class="options">
+        <label><input type="radio" name="q18" value="0"> A. Perte de mot de passe WiFi</label>
+        <label><input type="radio" name="q18" value="1"> B. Vol d’identité et de données sensibles</label>
+        <label><input type="radio" name="q18" value="0"> C. Mauvaise qualité vidéo</label>
+        <label><input type="radio" name="q18" value="0"> D. Ralentissement d’Internet</label>
+    </div>
+    <p id="q18_result" class="correction"></p>
+</div>
+
+<!-- Question 19 -->
+<div class="question-card">
+    <p>19. La sécurité passive inclut :</p>
+    <div class="options">
+        <label><input type="radio" name="q19" value="0"> A. Un VPN</label>
+        <label><input type="radio" name="q19" value="1"> B. Une mise à jour du navigateur</label>
+        <label><input type="radio" name="q19" value="0"> C. L’activation de la webcam</label>
+        <label><input type="radio" name="q19" value="0"> D. Un code QR</label>
+    </div>
+    <p id="q19_result" class="correction"></p>
+</div>
+
+<!-- Question 20 -->
+<div class="question-card">
+    <p>20. Quelle solution est utilisée pour stocker tous ses mots de passe avec un seul accès ?</p>
+    <div class="options">
+        <label><input type="radio" name="q20" value="1"> A. Keepass / LastPass</label>
+        <label><input type="radio" name="q20" value="0"> B. FileZilla</label>
+        <label><input type="radio" name="q20" value="0"> C. Firefox</label>
+        <label><input type="radio" name="q20" value="0"> D. Excel</label>
+    </div>
+    <p id="q20_result" class="correction"></p>
+</div>
+
+<!-- Question 21 -->
+<div class="question-card">
+    <p>21. À quoi sert le cryptage des données ?</p>
+    <div class="options">
+        <label><input type="radio" name="q21" value="0"> A. À les rendre plus visibles sur le Web</label>
+        <label><input type="radio" name="q21" value="0"> B. À compresser les fichiers</label>
+        <label><input type="radio" name="q21" value="1"> C. À rendre les données illisibles sans la clé</label>
+        <label><input type="radio" name="q21" value="0"> D. À supprimer les doublons</label>
+    </div>
+    <p id="q21_result" class="correction"></p>
+</div>
+
+<!-- Question 22 -->
+<div class="question-card">
+    <p>22. Quelle méthode de cryptage utilise une seule clé pour chiffrer et déchiffrer ?</p>
+    <div class="options">
+        <label><input type="radio" name="q22" value="1"> A. Cryptage symétrique</label>
+        <label><input type="radio" name="q22" value="0"> B. Cryptage asymétrique</label>
+        <label><input type="radio" name="q22" value="0"> C. Cryptage numérique</label>
+        <label><input type="radio" name="q22" value="0"> D. Cryptage biométrique</label>
+    </div>
+    <p id="q22_result" class="correction"></p>
+</div>
+
+<!-- Question 23 -->
+<div class="question-card">
+    <p>23. Le cryptage asymétrique repose sur :</p>
+    <div class="options">
+        <label><input type="radio" name="q23" value="0"> A. Une clé USB sécurisée</label>
+        <label><input type="radio" name="q23" value="1"> B. Une paire de clés publique/privée</label>
+        <label><input type="radio" name="q23" value="0"> C. Le mot de passe système</label>
+        <label><input type="radio" name="q23" value="0"> D. Le numéro de série du disque dur</label>
+    </div>
+    <p id="q23_result" class="correction"></p>
+</div>
+
+<!-- Question 24 -->
+<div class="question-card">
+    <p>24. Le logiciel VeraCrypt permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q24" value="0"> A. D’éditer du texte crypté</label>
+        <label><input type="radio" name="q24" value="0"> B. D'envoyer des mails sécurisés</label>
+        <label><input type="radio" name="q24" value="1"> C. De crypter des disques ou partitions</label>
+        <label><input type="radio" name="q24" value="0"> D. De modifier une adresse IP</label>
+    </div>
+    <p id="q24_result" class="correction"></p>
+</div>
+
+<!-- Question 25 -->
+<div class="question-card">
+    <p>25. La clé publique d’un portefeuille de cryptomonnaie sert à :</p>
+    <div class="options">
+        <label><input type="radio" name="q25" value="1"> A. Recevoir des actifs</label>
+        <label><input type="radio" name="q25" value="0"> B. Modifier les données du portefeuille</label>
+        <label><input type="radio" name="q25" value="0"> C. Détruire les transactions</label>
+        <label><input type="radio" name="q25" value="0"> D. Réinitialiser la blockchain</label>
+    </div>
+    <p id="q25_result" class="correction"></p>
+</div>
+
+<!-- Question 26 -->
+<div class="question-card">
+    <p>26. Pour signer numériquement un document, on utilise :</p>
+    <div class="options">
+        <label><input type="radio" name="q26" value="0"> A. Un VPN</label>
+        <label><input type="radio" name="q26" value="1"> B. Le cryptage asymétrique et une fonction de hash</label>
+        <label><input type="radio" name="q26" value="0"> C. Un scan de signature manuscrite</label>
+        <label><input type="radio" name="q26" value="0"> D. Une carte d'identité numérique</label>
+    </div>
+    <p id="q26_result" class="correction"></p>
+</div>
+
+<!-- Question 27 -->
+<div class="question-card">
+    <p>27. Une signature numérique est :</p>
+    <div class="options">
+        <label><input type="radio" name="q27" value="1"> A. Inaltérable et infalsifiable</label>
+        <label><input type="radio" name="q27" value="0"> B. Réutilisable pour d’autres documents</label>
+        <label><input type="radio" name="q27" value="0"> C. Basée sur une clé unique partagée</label>
+        <label><input type="radio" name="q27" value="0"> D. Visible uniquement sur papier</label>
+    </div>
+    <p id="q27_result" class="correction"></p>
+</div>
+
+<!-- Question 28 -->
+<div class="question-card">
+    <p>28. Que permet une fonction de hachage (hash) ?</p>
+    <div class="options">
+        <label><input type="radio" name="q28" value="0"> A. Protéger les cookies</label>
+        <label><input type="radio" name="q28" value="1"> B. Créer une empreinte unique d’un fichier</label>
+        <label><input type="radio" name="q28" value="0"> C. Convertir un texte en image</label>
+        <label><input type="radio" name="q28" value="0"> D. Trouver la langue d’un document</label>
+    </div>
+    <p id="q28_result" class="correction"></p>
+</div>
+
+<!-- Question 29 -->
+<div class="question-card">
+    <p>29. Qu’est-ce que le chiffrement RSA utilise ?</p>
+    <div class="options">
+        <label><input type="radio" name="q29" value="0"> A. Une seule clé</label>
+        <label><input type="radio" name="q29" value="1"> B. Deux grands nombres premiers</label>
+        <label><input type="radio" name="q29" value="0"> C. Un mot de passe global</label>
+        <label><input type="radio" name="q29" value="0"> D. Un algorithme biométrique</label>
+    </div>
+    <p id="q29_result" class="correction"></p>
+</div>
+
+<!-- Question 30 -->
+<div class="question-card">
+    <p>30. En cryptage asymétrique, qui peut lire un message chiffré ?</p>
+    <div class="options">
+        <label><input type="radio" name="q30" value="0"> A. Tout le monde</label>
+        <label><input type="radio" name="q30" value="0"> B. Celui qui l’a écrit</label>
+        <label><input type="radio" name="q30" value="1"> C. Celui qui possède la clé privée correspondante</label>
+        <label><input type="radio" name="q30" value="0"> D. Le FAI</label>
+    </div>
+    <p id="q30_result" class="correction"></p>
+</div>
+
+<!-- Question 31 -->
+<div class="question-card">
+    <p>31. En France, le cryptage était considéré comme une arme jusqu’à :</p>
+    <div class="options">
+        <label><input type="radio" name="q31" value="0"> A. 1980</label>
+        <label><input type="radio" name="q31" value="0"> B. 1990</label>
+        <label><input type="radio" name="q31" value="1"> C. 1996</label>
+        <label><input type="radio" name="q31" value="0"> D. 2004</label>
+    </div>
+    <p id="q31_result" class="correction"></p>
+</div>
+
+<!-- Question 32 -->
+<div class="question-card">
+    <p>32. Le chiffrement des communications HTTPS garantit :</p>
+    <div class="options">
+        <label><input type="radio" name="q32" value="0"> A. L’anonymat total</label>
+        <label><input type="radio" name="q32" value="0"> B. L’origine géographique de l’utilisateur</label>
+        <label><input type="radio" name="q32" value="1"> C. La sécurité des échanges entre client et serveur</label>
+        <label><input type="radio" name="q32" value="0"> D. La compression des fichiers</label>
+    </div>
+    <p id="q32_result" class="correction"></p>
+</div>
+
+<!-- Question 33 -->
+<div class="question-card">
+    <p>33. Que se passe-t-il si on perd la clé d’un fichier crypté ?</p>
+    <div class="options">
+        <label><input type="radio" name="q33" value="0"> A. Il est restauré automatiquement</label>
+        <label><input type="radio" name="q33" value="1"> B. Il devient inaccessible</label>
+        <label><input type="radio" name="q33" value="0"> C. Il se décrypte seul après un délai</label>
+        <label><input type="radio" name="q33" value="0"> D. Il est transféré sur le cloud</label>
+    </div>
+    <p id="q33_result" class="correction"></p>
+</div>
+
+<!-- Question 34 -->
+<div class="question-card">
+    <p>34. Quelle est la différence majeure entre cryptage symétrique et asymétrique ?</p>
+    <div class="options">
+        <label><input type="radio" name="q34" value="0"> A. La vitesse de lecture</label>
+        <label><input type="radio" name="q34" value="0"> B. Le format des données</label>
+        <label><input type="radio" name="q34" value="1"> C. Le nombre de clés utilisées</label>
+        <label><input type="radio" name="q34" value="0"> D. La taille des fichiers</label>
+    </div>
+    <p id="q34_result" class="correction"></p>
+</div>
+
+<!-- Question 35 -->
+<div class="question-card">
+    <p>35. Quelle longueur a une adresse IP en IPv6 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q35" value="0"> A. 32 bits</label>
+        <label><input type="radio" name="q35" value="0"> B. 64 bits</label>
+        <label><input type="radio" name="q35" value="1"> C. 128 bits</label>
+        <label><input type="radio" name="q35" value="0"> D. 256 bits</label>
+    </div>
+    <p id="q35_result" class="correction"></p>
+</div>
+
+<!-- Question 36 -->
+<div class="question-card">
+    <p>36. Un fichier crypté est illisible sans :</p>
+    <div class="options">
+        <label><input type="radio" name="q36" value="0"> A. Navigateur Internet</label>
+        <label><input type="radio" name="q36" value="0"> B. Antivirus à jour</label>
+        <label><input type="radio" name="q36" value="0"> C. Connexion réseau</label>
+        <label><input type="radio" name="q36" value="1"> D. La clé de décryptage</label>
+    </div>
+    <p id="q36_result" class="correction"></p>
+</div>
+
+<!-- Question 37 -->
+<div class="question-card">
+    <p>37. Le hachage est souvent utilisé pour :</p>
+    <div class="options">
+        <label><input type="radio" name="q37" value="0"> A. Améliorer le design web</label>
+        <label><input type="radio" name="q37" value="0"> B. Lire les fichiers texte</label>
+        <label><input type="radio" name="q37" value="1"> C. Vérifier l’intégrité d’un fichier</label>
+        <label><input type="radio" name="q37" value="0"> D. Accélérer le réseau</label>
+    </div>
+    <p id="q37_result" class="correction"></p>
+</div>
+
+<!-- Question 38 -->
+<div class="question-card">
+    <p>38. L’identifiant unique d’un bloc dans une blockchain est appelé :</p>
+    <div class="options">
+        <label><input type="radio" name="q38" value="0"> A. Cookie</label>
+        <label><input type="radio" name="q38" value="0"> B. Token</label>
+        <label><input type="radio" name="q38" value="1"> C. Hash</label>
+        <label><input type="radio" name="q38" value="0"> D. Pseudo-ID</label>
+    </div>
+    <p id="q38_result" class="correction"></p>
+</div>
+
+<!-- Question 39 -->
+<div class="question-card">
+    <p>39. Que fait une transaction enregistrée dans une blockchain ?</p>
+    <div class="options">
+        <label><input type="radio" name="q39" value="0"> A. Elle disparaît au bout de 24h</label>
+        <label><input type="radio" name="q39" value="0"> B. Elle peut être modifiée manuellement</label>
+        <label><input type="radio" name="q39" value="1"> C. Elle est immuable</label>
+        <label><input type="radio" name="q39" value="0"> D. Elle est supprimée si l’utilisateur le demande</label>
+    </div>
+    <p id="q39_result" class="correction"></p>
+</div>
+
+<!-- Question 40 -->
+<div class="question-card">
+    <p>40. Quelle est l’une des failles possibles dans un système de cryptage ?</p>
+    <div class="options">
+        <label><input type="radio" name="q40" value="0"> A. Trop de mémoire RAM</label>
+        <label><input type="radio" name="q40" value="1"> B. Perte de la clé ou attaque par force brute</label>
+        <label><input type="radio" name="q40" value="0"> C. Connexion rapide</label>
+        <label><input type="radio" name="q40" value="0"> D. Présence de cookies</label>
+    </div>
+    <p id="q40_result" class="correction"></p>
+</div>
+
+<!-- Question 41 -->
+<div class="question-card">
+    <p>41. Quelle est la signification du mot "Internet" ?</p>
+    <div class="options">
+        <label><input type="radio" name="q41" value="0"> A. Intranet sécurisé</label>
+        <label><input type="radio" name="q41" value="0"> B. Réseau local fermé</label>
+        <label><input type="radio" name="q41" value="1"> C. Interconnexion de réseaux</label>
+        <label><input type="radio" name="q41" value="0"> D. Réseau centralisé</label>
+    </div>
+    <p id="q41_result" class="correction"></p>
+</div>
+
+<!-- Question 42 -->
+<div class="question-card">
+    <p>42. Quel était l’ancêtre d’Internet ?</p>
+    <div class="options">
+        <label><input type="radio" name="q42" value="0"> A. World Wide Web</label>
+        <label><input type="radio" name="q42" value="1"> B. ARPANET</label>
+        <label><input type="radio" name="q42" value="0"> C. FacebookNet</label>
+        <label><input type="radio" name="q42" value="0"> D. TCP/IP</label>
+    </div>
+    <p id="q42_result" class="correction"></p>
+</div>
+
+<!-- Question 43 -->
+<div class="question-card">
+    <p>43. Quelle est la différence entre Internet et le Web ?</p>
+    <div class="options">
+        <label><input type="radio" name="q43" value="0"> A. Il n’y en a pas</label>
+        <label><input type="radio" name="q43" value="1"> B. Internet est le support, le Web est un service parmi d'autres</label>
+        <label><input type="radio" name="q43" value="0"> C. Le Web est plus sécurisé</label>
+        <label><input type="radio" name="q43" value="0"> D. Internet est uniquement pour les entreprises</label>
+    </div>
+    <p id="q43_result" class="correction"></p>
+</div>
+
+<!-- Question 44 -->
+<div class="question-card">
+    <p>44. À quoi sert le DNS ?</p>
+    <div class="options">
+        <label><input type="radio" name="q44" value="0"> A. À bloquer les cookies</label>
+        <label><input type="radio" name="q44" value="0"> B. À crypter les données</label>
+        <label><input type="radio" name="q44" value="1"> C. À convertir un nom de domaine en adresse IP</label>
+        <label><input type="radio" name="q44" value="0"> D. À créer une adresse email</label>
+    </div>
+    <p id="q44_result" class="correction"></p>
+</div>
+
+<!-- Question 45 -->
+<div class="question-card">
+    <p>45. Une adresse IP est similaire à :</p>
+    <div class="options">
+        <label><input type="radio" name="q45" value="0"> A. Un numéro de téléphone</label>
+        <label><input type="radio" name="q45" value="0"> B. Une carte graphique</label>
+        <label><input type="radio" name="q45" value="1"> C. Une adresse postale pour les machines</label>
+        <label><input type="radio" name="q45" value="0"> D. Un mot de passe</label>
+    </div>
+    <p id="q45_result" class="correction"></p>
+</div>
+
+<!-- Question 46 -->
+<div class="question-card">
+    <p>46. Combien de bits comporte une adresse IPv4 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q46" value="0"> A. 16</label>
+        <label><input type="radio" name="q46" value="1"> B. 32</label>
+        <label><input type="radio" name="q46" value="0"> C. 64</label>
+        <label><input type="radio" name="q46" value="0"> D. 128</label>
+    </div>
+    <p id="q46_result" class="correction"></p>
+</div>
+
+<!-- Question 47 -->
+<div class="question-card">
+    <p>47. Quelle est l’adresse loopback en IPv4 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q47" value="1"> A. 127.0.0.1</label>
+        <label><input type="radio" name="q47" value="0"> B. 255.255.255.255</label>
+        <label><input type="radio" name="q47" value="0"> C. 192.168.1.1</label>
+        <label><input type="radio" name="q47" value="0"> D. 8.8.8.8</label>
+    </div>
+    <p id="q47_result" class="correction"></p>
+</div>
+
+<!-- Question 48 -->
+<div class="question-card">
+    <p>48. Pourquoi passe-t-on à l’IPv6 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q48" value="0"> A. Pour de meilleures vidéos</label>
+        <label><input type="radio" name="q48" value="0"> B. Pour plus de vitesse</label>
+        <label><input type="radio" name="q48" value="1"> C. Parce que l’IPv4 ne suffit plus (épuisement des adresses)</label>
+        <label><input type="radio" name="q48" value="0"> D. Parce que c’est plus simple</label>
+    </div>
+    <p id="q48_result" class="correction"></p>
+</div>
+
+<!-- Question 49 -->
+<div class="question-card">
+    <p>49. Quelle est la taille d’une adresse IPv6 ?</p>
+    <div class="options">
+        <label><input type="radio" name="q49" value="0"> A. 32 bits</label>
+        <label><input type="radio" name="q49" value="0"> B. 64 bits</label>
+        <label><input type="radio" name="q49" value="1"> C. 128 bits</label>
+        <label><input type="radio" name="q49" value="0"> D. 256 bits</label>
+    </div>
+    <p id="q49_result" class="correction"></p>
+</div>
+
+<!-- Question 50 -->
+<div class="question-card">
+    <p>50. Le routage permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q50" value="0"> A. De bloquer les intrusions</label>
+        <label><input type="radio" name="q50" value="1"> B. De faire circuler les données sur le bon chemin</label>
+        <label><input type="radio" name="q50" value="0"> C. D’activer le cryptage</label>
+        <label><input type="radio" name="q50" value="0"> D. D’effacer les logs</label>
+    </div>
+    <p id="q50_result" class="correction"></p>
+</div>
+
+<!-- Question 51 -->
+<div class="question-card">
+    <p>51. Quelle est la fonction du NAT ?</p>
+    <div class="options">
+        <label><input type="radio" name="q51" value="0"> A. Sauvegarder les cookies</label>
+        <label><input type="radio" name="q51" value="1"> B. Partager une adresse IP publique entre plusieurs machines locales</label>
+        <label><input type="radio" name="q51" value="0"> C. Récupérer une adresse email</label>
+        <label><input type="radio" name="q51" value="0"> D. Crypter les échanges</label>
+    </div>
+    <p id="q51_result" class="correction"></p>
+</div>
+
+<!-- Question 52 -->
+<div class="question-card">
+    <p>52. Qu’est-ce qu’un port dans une communication réseau ?</p>
+    <div class="options">
+        <label><input type="radio" name="q52" value="0"> A. Un port USB</label>
+        <label><input type="radio" name="q52" value="1"> B. Une “boîte aux lettres” logicielle pour les services d’une machine</label>
+        <label><input type="radio" name="q52" value="0"> C. Une adresse IP</label>
+        <label><input type="radio" name="q52" value="0"> D. Un serveur DNS</label>
+    </div>
+    <p id="q52_result" class="correction"></p>
+</div>
+
+<!-- Question 53 -->
+<div class="question-card">
+    <p>53. Le protocole HTTP est utilisé pour :</p>
+    <div class="options">
+        <label><input type="radio" name="q53" value="0"> A. Lire un fichier PDF</label>
+        <label><input type="radio" name="q53" value="1"> B. Afficher des pages Web</label>
+        <label><input type="radio" name="q53" value="0"> C. Transférer des emails</label>
+        <label><input type="radio" name="q53" value="0"> D. Faire un ping réseau</label>
+    </div>
+    <p id="q53_result" class="correction"></p>
+</div>
+
+<!-- Question 54 -->
+<div class="question-card">
+    <p>54. Que permet le protocole HTTPS ?</p>
+    <div class="options">
+        <label><input type="radio" name="q54" value="0"> A. Envoyer des vidéos</label>
+        <label><input type="radio" name="q54" value="1"> B. Protéger les données échangées entre le navigateur et le site Web</label>
+        <label><input type="radio" name="q54" value="0"> C. Télécharger des pilotes</label>
+        <label><input type="radio" name="q54" value="0"> D. Supprimer les cookies</label>
+    </div>
+    <p id="q54_result" class="correction"></p>
+</div>
+
+<!-- Question 55 -->
+<div class="question-card">
+    <p>55. Dans quelle couche réseau trouve-t-on l’IP ?</p>
+    <div class="options">
+        <label><input type="radio" name="q55" value="0"> A. Physique</label>
+        <label><input type="radio" name="q55" value="1"> B. Réseau</label>
+        <label><input type="radio" name="q55" value="0"> C. Application</label>
+        <label><input type="radio" name="q55" value="0"> D. Transport</label>
+    </div>
+    <p id="q55_result" class="correction"></p>
+</div>
+
+<!-- Question 56 -->
+<div class="question-card">
+    <p>56. Le protocole TCP permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q56" value="0"> A. Une navigation anonyme</label>
+        <label><input type="radio" name="q56" value="1"> B. Une communication fiable, sans perte de données</label>
+        <label><input type="radio" name="q56" value="0"> C. De bloquer les virus</label>
+        <label><input type="radio" name="q56" value="0"> D. Une conversion d’IP</label>
+    </div>
+    <p id="q56_result" class="correction"></p>
+</div>
+
+<!-- Question 57 -->
+<div class="question-card">
+    <p>57. Le UDP est différent du TCP car il :</p>
+    <div class="options">
+        <label><input type="radio" name="q57" value="0"> A. N'utilise pas d’adresse IP</label>
+        <label><input type="radio" name="q57" value="0"> B. Est sécurisé</label>
+        <label><input type="radio" name="q57" value="1"> C. Ne garantit pas la livraison des paquets</label>
+        <label><input type="radio" name="q57" value="0"> D. Est utilisé uniquement dans les VPN</label>
+    </div>
+    <p id="q57_result" class="correction"></p>
+</div>
+
+<!-- Question 58 -->
+<div class="question-card">
+    <p>58. La topologie d’Internet est :</p>
+    <div class="options">
+        <label><input type="radio" name="q58" value="0"> A. Linéaire</label>
+        <label><input type="radio" name="q58" value="0"> B. Étoilée</label>
+        <label><input type="radio" name="q58" value="1"> C. Hiérarchique mais maillée (plusieurs chemins possibles)</label>
+        <label><input type="radio" name="q58" value="0"> D. Câblée uniquement</label>
+    </div>
+    <p id="q58_result" class="correction"></p>
+</div>
+
+<!-- Question 59 -->
+<div class="question-card">
+    <p>59. Exemple de protocole de transfert de fichiers :</p>
+    <div class="options">
+        <label><input type="radio" name="q59" value="0"> A. HTTPS</label>
+        <label><input type="radio" name="q59" value="1"> B. FTP</label>
+        <label><input type="radio" name="q59" value="0"> C. SSHFS</label>
+        <label><input type="radio" name="q59" value="0"> D. SMTP</label>
+    </div>
+    <p id="q59_result" class="correction"></p>
+</div>
+
+<!-- Question 60 -->
+<div class="question-card">
+    <p>60. Quelle est la conséquence d’une attaque par déni de service (DoS) ?</p>
+    <div class="options">
+        <label><input type="radio" name="q60" value="0"> A. Augmentation du trafic DNS</label>
+        <label><input type="radio" name="q60" value="0"> B. Blocage d’accès aux services ou sites</label>
+        <label><input type="radio" name="q60" value="1"> C. Surcharge d’un serveur par un trafic massif</label>
+        <label><input type="radio" name="q60" value="0"> D. Perte de mot de passe</label>
+    </div>
+    <p id="q60_result" class="correction"></p>
+</div>
+
+<!-- Question 61 -->
+<div class="question-card">
+    <p>61. À l’origine, la blockchain est :</p>
+    <div class="options">
+        <label><input type="radio" name="q61" value="1"> A. Un registre décentralisé de transactions</label>
+        <label><input type="radio" name="q61" value="0"> B. Une application de chat sécurisée</label>
+        <label><input type="radio" name="q61" value="0"> C. Un système de cloud</label>
+        <label><input type="radio" name="q61" value="0"> D. Un logiciel de minage</label>
+    </div>
+    <p id="q61_result" class="correction"></p>
+</div>
+
+<!-- Question 62 -->
+<div class="question-card">
+    <p>62. Une blockchain est dite immuable car :</p>
+    <div class="options">
+        <label><input type="radio" name="q62" value="0"> A. Elle est toujours connectée à Internet</label>
+        <label><input type="radio" name="q62" value="0"> B. Les données peuvent être supprimées à volonté</label>
+        <label><input type="radio" name="q62" value="1"> C. Les transactions ne peuvent pas être modifiées ou effacées</label>
+        <label><input type="radio" name="q62" value="0"> D. Elle se met à jour toutes les heures</label>
+    </div>
+    <p id="q62_result" class="correction"></p>
+</div>
+
+<!-- Question 63 -->
+<div class="question-card">
+    <p>63. Pour supprimer une transaction dans la blockchain, il faut :</p>
+    <div class="options">
+        <label><input type="radio" name="q63" value="0"> A. Appuyer sur « supprimer » dans l'application</label>
+        <label><input type="radio" name="q63" value="0"> B. Envoyer un email à l’administrateur</label>
+        <label><input type="radio" name="q63" value="1"> C. Créer une transaction inverse</label>
+        <label><input type="radio" name="q63" value="0"> D. Payer une taxe spéciale</label>
+    </div>
+    <p id="q63_result" class="correction"></p>
+</div>
+
+<!-- Question 64 -->
+<div class="question-card">
+    <p>64. Le consensus dans une blockchain permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q64" value="0"> A. De voter pour élire un président</label>
+        <label><input type="radio" name="q64" value="1"> B. De valider les transactions entre utilisateurs</label>
+        <label><input type="radio" name="q64" value="0"> C. D’annuler les transactions invalides</label>
+        <label><input type="radio" name="q64" value="0"> D. De limiter les frais de transaction</label>
+    </div>
+    <p id="q64_result" class="correction"></p>
+</div>
+
+<!-- Question 65 -->
+<div class="question-card">
+    <p>65. Le « proof of work » est :</p>
+    <div class="options">
+        <label><input type="radio" name="q65" value="0"> A. Un mot de passe crypté</label>
+        <label><input type="radio" name="q65" value="0"> B. Une preuve d’identité biométrique</label>
+        <label><input type="radio" name="q65" value="1"> C. Une méthode de validation basée sur le calcul</label>
+        <label><input type="radio" name="q65" value="0"> D. Une technique de piratage</label>
+    </div>
+    <p id="q65_result" class="correction"></p>
+</div>
+
+<!-- Question 66 -->
+<div class="question-card">
+    <p>66. Le minage permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q66" value="0"> A. De supprimer des blocs</label>
+        <label><input type="radio" name="q66" value="0"> B. D’accélérer Internet</label>
+        <label><input type="radio" name="q66" value="1"> C. De valider des blocs et de recevoir une récompense</label>
+        <label><input type="radio" name="q66" value="0"> D. De crypter un portefeuille</label>
+    </div>
+    <p id="q66_result" class="correction"></p>
+</div>
+
+<!-- Question 67 -->
+<div class="question-card">
+    <p>67. Dans un portefeuille de cryptomonnaie, la clé publique sert à :</p>
+    <div class="options">
+        <label><input type="radio" name="q67" value="0"> A. Détruire les actifs</label>
+        <label><input type="radio" name="q67" value="1"> B. Recevoir des actifs</label>
+        <label><input type="radio" name="q67" value="0"> C. Générer du Bitcoin</label>
+        <label><input type="radio" name="q67" value="0"> D. Modifier les anciennes transactions</label>
+    </div>
+    <p id="q67_result" class="correction"></p>
+</div>
+
+<!-- Question 68 -->
+<div class="question-card">
+    <p>68. La clé privée d’un portefeuille sert à :</p>
+    <div class="options">
+        <label><input type="radio" name="q68" value="0"> A. Recevoir du Bitcoin</label>
+        <label><input type="radio" name="q68" value="0"> B. Voir le solde de son compte</label>
+        <label><input type="radio" name="q68" value="1"> C. Signer une transaction et accéder aux fonds</label>
+        <label><input type="radio" name="q68" value="0"> D. Recharger sa batterie</label>
+    </div>
+    <p id="q68_result" class="correction"></p>
+</div>
+
+<!-- Question 69 -->
+<div class="question-card">
+    <p>69. Quelle est la première cryptomonnaie créée ?</p>
+    <div class="options">
+        <label><input type="radio" name="q69" value="0"> A. Ethereum</label>
+        <label><input type="radio" name="q69" value="0"> B. Litecoin</label>
+        <label><input type="radio" name="q69" value="1"> C. Bitcoin</label>
+        <label><input type="radio" name="q69" value="0"> D. Ripple</label>
+    </div>
+    <p id="q69_result" class="correction"></p>
+</div>
+
+<!-- Question 70 -->
+<div class="question-card">
+    <p>70. Qui est le créateur du Bitcoin ?</p>
+    <div class="options">
+        <label><input type="radio" name="q70" value="0"> A. Elon Musk</label>
+        <label><input type="radio" name="q70" value="1"> B. Satoshi Nakamoto (pseudonyme)</label>
+        <label><input type="radio" name="q70" value="0"> C. Vitalik Buterin</label>
+        <label><input type="radio" name="q70" value="0"> D. Edward Snowden</label>
+    </div>
+    <p id="q70_result" class="correction"></p>
+</div>
+
+<!-- Question 71 -->
+<div class="question-card">
+    <p>71. Quelle est l’une des critiques principales contre le Bitcoin ?</p>
+    <div class="options">
+        <label><input type="radio" name="q71" value="0"> A. Trop sécurisé</label>
+        <label><input type="radio" name="q71" value="0"> B. Manque de capitalisation</label>
+        <label><input type="radio" name="q71" value="1"> C. Écologiquement coûteux (énergie)</label>
+        <label><input type="radio" name="q71" value="0"> D. Utilisé uniquement par les banques</label>
+    </div>
+    <p id="q71_result" class="correction"></p>
+</div>
+
+<!-- Question 72 -->
+<div class="question-card">
+    <p>72. La valeur d’une cryptomonnaie dépend :</p>
+    <div class="options">
+        <label><input type="radio" name="q72" value="0"> A. Du volume d’eau utilisé</label>
+        <label><input type="radio" name="q72" value="0"> B. Du nombre de banques l’acceptant</label>
+        <label><input type="radio" name="q72" value="1"> C. De la spéculation et du coût du minage</label>
+        <label><input type="radio" name="q72" value="0"> D. De son origine géographique</label>
+    </div>
+    <p id="q72_result" class="correction"></p>
+</div>
+
+<!-- Question 73 -->
+<div class="question-card">
+    <p>73. Une transaction Bitcoin est confirmée lorsque :</p>
+    <div class="options">
+        <label><input type="radio" name="q73" value="0"> A. Le serveur l’approuve</label>
+        <label><input type="radio" name="q73" value="0"> B. Elle a été vue par 2 utilisateurs</label>
+        <label><input type="radio" name="q73" value="1"> C. Elle a reçu un certain nombre de confirmations</label>
+        <label><input type="radio" name="q73" value="0"> D. Le FAI la valide</label>
+    </div>
+    <p id="q73_result" class="correction"></p>
+</div>
+
+<!-- Question 74 -->
+<div class="question-card">
+    <p>74. Qu’est-ce qu’un bloc dans la blockchain ?</p>
+    <div class="options">
+        <label><input type="radio" name="q74" value="0"> A. Un document administratif</label>
+        <label><input type="radio" name="q74" value="1"> B. Une série de transactions regroupées avec un identifiant unique</label>
+        <label><input type="radio" name="q74" value="0"> C. Un code HTML</label>
+        <label><input type="radio" name="q74" value="0"> D. Un logiciel de calcul</label>
+    </div>
+    <p id="q74_result" class="correction"></p>
+</div>
+
+<!-- Question 75 -->
+<div class="question-card">
+    <p>75. Le hash d’un bloc est :</p>
+    <div class="options">
+        <label><input type="radio" name="q75" value="0"> A. Une image du bloc</label>
+        <label><input type="radio" name="q75" value="0"> B. Un logiciel de compression</label>
+        <label><input type="radio" name="q75" value="1"> C. Une empreinte unique représentant le bloc</label>
+        <label><input type="radio" name="q75" value="0"> D. Un mot de passe temporaire</label>
+    </div>
+    <p id="q75_result" class="correction"></p>
+</div>
+
+<!-- Question 76 -->
+<div class="question-card">
+    <p>76. La blockchain garantit la sécurité grâce à :</p>
+    <div class="options">
+        <label><input type="radio" name="q76" value="0"> A. La mémoire RAM</label>
+        <label><input type="radio" name="q76" value="1"> B. La cryptographie et la décentralisation</label>
+        <label><input type="radio" name="q76" value="0"> C. La 5G</label>
+        <label><input type="radio" name="q76" value="0"> D. La compression de fichiers</label>
+    </div>
+    <p id="q76_result" class="correction"></p>
+</div>
+
+<!-- Question 77 -->
+<div class="question-card">
+    <p>77. Le Salvador a adopté le Bitcoin comme :</p>
+    <div class="options">
+        <label><input type="radio" name="q77" value="0"> A. Moyen de stockage numérique</label>
+        <label><input type="radio" name="q77" value="1"> B. Monnaie légale (en 2021)</label>
+        <label><input type="radio" name="q77" value="0"> C. Carte d’identité numérique</label>
+        <label><input type="radio" name="q77" value="0"> D. Application mobile éducative</label>
+    </div>
+    <p id="q77_result" class="correction"></p>
+</div>
+
+<!-- Question 78 -->
+<div class="question-card">
+    <p>78. Quelle est une conséquence de l’usage massif du minage ?</p>
+    <div class="options">
+        <label><input type="radio" name="q78" value="0"> A. Ralentissement du Web</label>
+        <label><input type="radio" name="q78" value="0"> B. Trop de cryptomonnaies créées</label>
+        <label><input type="radio" name="q78" value="1"> C. Pénurie de cartes graphiques</label>
+        <label><input type="radio" name="q78" value="0"> D. Piratage généralisé</label>
+    </div>
+    <p id="q78_result" class="correction"></p>
+</div>
+
+<!-- Question 79 -->
+<div class="question-card">
+    <p>79. La preuve de participation (proof of stake) se base sur :</p>
+    <div class="options">
+        <label><input type="radio" name="q79" value="0"> A. La reconnaissance faciale</label>
+        <label><input type="radio" name="q79" value="0"> B. L’adresse IP de l’utilisateur</label>
+        <label><input type="radio" name="q79" value="1"> C. La quantité détenue de la cryptomonnaie</label>
+        <label><input type="radio" name="q79" value="0"> D. Le nom de domaine</label>
+    </div>
+    <p id="q79_result" class="correction"></p>
+</div>
+
+<!-- Question 80 -->
+<div class="question-card">
+    <p>80. Une propriété essentielle de la blockchain est :</p>
+    <div class="options">
+        <label><input type="radio" name="q80" value="0"> A. Elle est centralisée et contrôlée</label>
+        <label><input type="radio" name="q80" value="0"> B. Les données sont temporaires</label>
+        <label><input type="radio" name="q80" value="1"> C. Elle est transparente, distribuée, et durable</label>
+        <label><input type="radio" name="q80" value="0"> D. Elle est réservée aux banques</label>
+    </div>
+    <p id="q80_result" class="correction"></p>
+</div>
+
+<!-- Question 81 -->
+<div class="question-card">
+    <p>81. Les « traces locales » sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q81" value="1"> A. Les informations laissées sur votre propre appareil</label>
+        <label><input type="radio" name="q81" value="0"> B. Les données collectées sur les réseaux sociaux</label>
+        <label><input type="radio" name="q81" value="0"> C. Les mails envoyés</label>
+        <label><input type="radio" name="q81" value="0"> D. Les fichiers de sauvegarde sur le cloud</label>
+    </div>
+    <p id="q81_result" class="correction"></p>
+</div>
+
+<!-- Question 82 -->
+<div class="question-card">
+    <p>82. Un cookie est :</p>
+    <div class="options">
+        <label><input type="radio" name="q82" value="0"> A. Un virus informatique</label>
+        <label><input type="radio" name="q82" value="0"> B. Une sauvegarde automatique</label>
+        <label><input type="radio" name="q82" value="1"> C. Un petit fichier déposé par un site Web pour enregistrer des infos</label>
+        <label><input type="radio" name="q82" value="0"> D. Un raccourci vers votre profil</label>
+    </div>
+    <p id="q82_result" class="correction"></p>
+</div>
+
+<!-- Question 83 -->
+<div class="question-card">
+    <p>83. Un des risques liés aux cookies publicitaires est :</p>
+    <div class="options">
+        <label><input type="radio" name="q83" value="0"> A. Ralentir l’ordinateur</label>
+        <label><input type="radio" name="q83" value="1"> B. Tracer vos habitudes de navigation à des fins commerciales</label>
+        <label><input type="radio" name="q83" value="0"> C. Empêcher l’accès aux sites</label>
+        <label><input type="radio" name="q83" value="0"> D. Forcer à changer de navigateur</label>
+    </div>
+    <p id="q83_result" class="correction"></p>
+</div>
+
+<!-- Question 84 -->
+<div class="question-card">
+    <p>84. Un VPN permet :</p>
+    <div class="options">
+        <label><input type="radio" name="q84" value="0"> A. De supprimer les virus</label>
+        <label><input type="radio" name="q84" value="0"> B. De compresser les fichiers</label>
+        <label><input type="radio" name="q84" value="1"> C. De sécuriser et anonymiser la connexion à un réseau</label>
+        <label><input type="radio" name="q84" value="0"> D. De créer des mots de passe</label>
+    </div>
+    <p id="q84_result" class="correction"></p>
+</div>
+
+<!-- Question 85 -->
+<div class="question-card">
+    <p>85. Le mode "navigation privée" empêche :</p>
+    <div class="options">
+        <label><input type="radio" name="q85" value="0"> A. Les virus</label>
+        <label><input type="radio" name="q85" value="1"> B. L’enregistrement de l’historique local et des cookies</label>
+        <label><input type="radio" name="q85" value="0"> C. L’accès aux réseaux sociaux</label>
+        <label><input type="radio" name="q85" value="0"> D. Le téléchargement de fichiers</label>
+    </div>
+    <p id="q85_result" class="correction"></p>
+</div>
+
+<!-- Question 86 -->
+<div class="question-card">
+    <p>86. Les « traces mixtes » sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q86" value="0"> A. Des fichiers supprimés</label>
+        <label><input type="radio" name="q86" value="1"> B. Des données locales liées à des actions sur des sites distants</label>
+        <label><input type="radio" name="q86" value="0"> C. Des cookies obsolètes</label>
+        <label><input type="radio" name="q86" value="0"> D. Des SMS enregistrés</label>
+    </div>
+    <p id="q86_result" class="correction"></p>
+</div>
+
+<!-- Question 87 -->
+<div class="question-card">
+    <p>87. Qui a accès à votre historique de navigation via votre FAI ?</p>
+    <div class="options">
+        <label><input type="radio" name="q87" value="0"> A. Personne</label>
+        <label><input type="radio" name="q87" value="1"> B. Votre Fournisseur d’Accès à Internet (FAI)</label>
+        <label><input type="radio" name="q87" value="0"> C. Vos contacts</label>
+        <label><input type="radio" name="q87" value="0"> D. L’antivirus</label>
+    </div>
+    <p id="q87_result" class="correction"></p>
+</div>
+
+<!-- Question 88 -->
+<div class="question-card">
+    <p>88. Le "droit à l’oubli" numérique permet de :</p>
+    <div class="options">
+        <label><input type="radio" name="q88" value="0"> A. Supprimer des logiciels</label>
+        <label><input type="radio" name="q88" value="1"> B. Demander le retrait d’informations personnelles sur Internet</label>
+        <label><input type="radio" name="q88" value="0"> C. Éteindre son ordinateur à distance</label>
+        <label><input type="radio" name="q88" value="0"> D. Se déconnecter automatiquement du Wi-Fi</label>
+    </div>
+    <p id="q88_result" class="correction"></p>
+</div>
+
+<!-- Question 89 -->
+<div class="question-card">
+    <p>89. Une trace publique est :</p>
+    <div class="options">
+        <label><input type="radio" name="q89" value="0"> A. Un cookie expiré</label>
+        <label><input type="radio" name="q89" value="0"> B. Un fichier temporaire</label>
+        <label><input type="radio" name="q89" value="1"> C. Une publication visible par tout le monde sur Internet</label>
+        <label><input type="radio" name="q89" value="0"> D. Une clé USB partagée</label>
+    </div>
+    <p id="q89_result" class="correction"></p>
+</div>
+
+<!-- Question 90 -->
+<div class="question-card">
+    <p>90. Quelle mesure renforce la protection des données en Europe ?</p>
+    <div class="options">
+        <label><input type="radio" name="q90" value="0"> A. CNIL mondiale</label>
+        <label><input type="radio" name="q90" value="0"> B. Loi sur le cryptage</label>
+        <label><input type="radio" name="q90" value="1"> C. RGPD (Règlement Général sur la Protection des Données)</label>
+        <label><input type="radio" name="q90" value="0"> D. La double authentification</label>
+    </div>
+    <p id="q90_result" class="correction"></p>
+</div>
+
+<!-- Question 91 -->
+<div class="question-card">
+    <p>91. Depuis quand le RGPD est-il appliqué ?</p>
+    <div class="options">
+        <label><input type="radio" name="q91" value="0"> A. 2012</label>
+        <label><input type="radio" name="q91" value="0"> B. 2016</label>
+        <label><input type="radio" name="q91" value="1"> C. 25 mai 2018</label>
+        <label><input type="radio" name="q91" value="0"> D. 2020</label>
+    </div>
+    <p id="q91_result" class="correction"></p>
+</div>
+
+<!-- Question 92 -->
+<div class="question-card">
+    <p>92. Le RGPD impose le consentement :</p>
+    <div class="options">
+        <label><input type="radio" name="q92" value="0"> A. Oral seulement</label>
+        <label><input type="radio" name="q92" value="1"> B. Explicite et positif</label>
+        <label><input type="radio" name="q92" value="0"> C. Automatique via les cookies</label>
+        <label><input type="radio" name="q92" value="0"> D. Donné une seule fois pour toujours</label>
+    </div>
+    <p id="q92_result" class="correction"></p>
+</div>
+
+<!-- Question 93 -->
+<div class="question-card">
+    <p>93. Le RGPD est valable :</p>
+    <div class="options">
+        <label><input type="radio" name="q93" value="0"> A. Seulement en France</label>
+        <label><input type="radio" name="q93" value="1"> B. Pour toute entreprise traitant des données de citoyens européens</label>
+        <label><input type="radio" name="q93" value="0"> C. Uniquement pour les applications de l’État</label>
+        <label><input type="radio" name="q93" value="0"> D. Seulement sur Firefox</label>
+    </div>
+    <p id="q93_result" class="correction"></p>
+</div>
+
+<!-- Question 94 -->
+<div class="question-card">
+    <p>94. Une des obligations du RGPD est :</p>
+    <div class="options">
+        <label><input type="radio" name="q94" value="0"> A. Interdire Internet aux mineurs</label>
+        <label><input type="radio" name="q94" value="0"> B. Afficher tous les mots de passe</label>
+        <label><input type="radio" name="q94" value="1"> C. Notifier les fuites de données</label>
+        <label><input type="radio" name="q94" value="0"> D. Supprimer les cookies automatiquement</label>
+    </div>
+    <p id="q94_result" class="correction"></p>
+</div>
+
+<!-- Question 95 -->
+<div class="question-card">
+    <p>95. Exemple de plateforme collectant vos données personnelles :</p>
+    <div class="options">
+        <label><input type="radio" name="q95" value="0"> A. VLC</label>
+        <label><input type="radio" name="q95" value="1"> B. Facebook</label>
+        <label><input type="radio" name="q95" value="0"> C. LibreOffice</label>
+        <label><input type="radio" name="q95" value="0"> D. 7-Zip</label>
+    </div>
+    <p id="q95_result" class="correction"></p>
+</div>
+
+<!-- Question 96 -->
+<div class="question-card">
+    <p>96. L’e-réputation correspond à :</p>
+    <div class="options">
+        <label><input type="radio" name="q96" value="0"> A. Une adresse email</label>
+        <label><input type="radio" name="q96" value="1"> B. L’image qu’on donne de soi sur Internet</label>
+        <label><input type="radio" name="q96" value="0"> C. Une carte bancaire virtuelle</label>
+        <label><input type="radio" name="q96" value="0"> D. Une archive personnelle</label>
+    </div>
+    <p id="q96_result" class="correction"></p>
+</div>
+
+<!-- Question 97 -->
+<div class="question-card">
+    <p>97. Les cookies de préférences servent à :</p>
+    <div class="options">
+        <label><input type="radio" name="q97" value="0"> A. Créer des virus</label>
+        <label><input type="radio" name="q97" value="1"> B. Retenir vos choix sur un site Web</label>
+        <label><input type="radio" name="q97" value="0"> C. Vérifier votre email</label>
+        <label><input type="radio" name="q97" value="0"> D. Protéger vos données bancaires</label>
+    </div>
+    <p id="q97_result" class="correction"></p>
+</div>
+
+<!-- Question 98 -->
+<div class="question-card">
+    <p>98. Le VPN d’une entreprise permet à l’utilisateur :</p>
+    <div class="options">
+        <label><input type="radio" name="q98" value="0"> A. D’accéder à Netflix en cachette</label>
+        <label><input type="radio" name="q98" value="0"> B. D’être anonyme sur tous les réseaux</label>
+        <label><input type="radio" name="q98" value="1"> C. D'accéder à distance comme s’il était dans l’entreprise</label>
+        <label><input type="radio" name="q98" value="0"> D. De créer une blockchain</label>
+    </div>
+    <p id="q98_result" class="correction"></p>
+</div>
+
+<!-- Question 99 -->
+<div class="question-card">
+    <p>99. Quel est un risque des services VPN gratuits ?</p>
+    <div class="options">
+        <label><input type="radio" name="q99" value="0"> A. Ils sont trop chers</label>
+        <label><input type="radio" name="q99" value="0"> B. Ils accélèrent trop Internet</label>
+        <label><input type="radio" name="q99" value="1"> C. Ils peuvent vendre vos données personnelles</label>
+        <label><input type="radio" name="q99" value="0"> D. Ils suppriment les emails</label>
+    </div>
+    <p id="q99_result" class="correction"></p>
+</div>
+
+<!-- Question 100 -->
+<div class="question-card">
+    <p>100. En navigation VPN “accès total” :</p>
+    <div class="options">
+        <label><input type="radio" name="q100" value="0"> A. Seuls les sites de l'entreprise sont visibles</label>
+        <label><input type="radio" name="q100" value="1"> B. Tout le trafic Internet passe par le réseau de l’entreprise</label>
+        <label><input type="radio" name="q100" value="0"> C. Seul le Wi-Fi public est activé</label>
+        <label><input type="radio" name="q100" value="0"> D. Les cookies sont automatiquement bloqués</label>
+    </div>
+    <p id="q100_result" class="correction"></p>
+</div>
+
+<!-- Question 101 -->
+<div class="question-card">
+    <p>101. Une source d’information collaborative est :</p>
+    <div class="options">
+        <label><input type="radio" name="q101" value="0"> A. Un rapport gouvernemental</label>
+        <label><input type="radio" name="q101" value="1"> B. Wikipédia</label>
+        <label><input type="radio" name="q101" value="0"> C. Un SMS officiel</label>
+        <label><input type="radio" name="q101" value="0"> D. Un rapport d’expert</label>
+    </div>
+    <p id="q101_result" class="correction"></p>
+</div>
+
+<!-- Question 102 -->
+<div class="question-card">
+    <p>102. Les fake news sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q102" value="0"> A. Des documents juridiques</label>
+        <label><input type="radio" name="q102" value="1"> B. Des fausses informations diffusées comme vraies</label>
+        <label><input type="radio" name="q102" value="0"> C. Des fichiers virus</label>
+        <label><input type="radio" name="q102" value="0"> D. Des signatures électroniques</label>
+    </div>
+    <p id="q102_result" class="correction"></p>
+</div>
+
+<!-- Question 103 -->
+<div class="question-card">
+    <p>103. Une guerre d’édition sur Wikipédia se produit quand :</p>
+    <div class="options">
+        <label><input type="radio" name="q103" value="0"> A. Un serveur est attaqué</label>
+        <label><input type="radio" name="q103" value="1"> B. Des utilisateurs modifient en boucle un contenu pour défendre une opinion</label>
+        <label><input type="radio" name="q103" value="0"> C. Le site plante</label>
+        <label><input type="radio" name="q103" value="0"> D. Les images sont floues</label>
+    </div>
+    <p id="q103_result" class="correction"></p>
+</div>
+
+<!-- Question 104 -->
+<div class="question-card">
+    <p>104. Un hoax est :</p>
+    <div class="options">
+        <label><input type="radio" name="q104" value="0"> A. Un type de malware</label>
+        <label><input type="radio" name="q104" value="1"> B. Une rumeur ou une fausse alerte</label>
+        <label><input type="radio" name="q104" value="0"> C. Un compte vérifié</label>
+        <label><input type="radio" name="q104" value="0"> D. Une adresse IP privée</label>
+    </div>
+    <p id="q104_result" class="correction"></p>
+</div>
+
+<!-- Question 105 -->
+<div class="question-card">
+    <p>105. La validation par les pairs concerne :</p>
+    <div class="options">
+        <label><input type="radio" name="q105" value="0"> A. Les cookies</label>
+        <label><input type="radio" name="q105" value="0"> B. Les moteurs de recherche</label>
+        <label><input type="radio" name="q105" value="1"> C. Les publications scientifiques</label>
+        <label><input type="radio" name="q105" value="0"> D. Les serveurs DNS</label>
+    </div>
+    <p id="q105_result" class="correction"></p>
+</div>
+
+<!-- Question 106 -->
+<div class="question-card">
+    <p>106. Un article en « preprint » signifie :</p>
+    <div class="options">
+        <label><input type="radio" name="q106" value="0"> A. Il est imprimé sur papier</label>
+        <label><input type="radio" name="q106" value="1"> B. Il n’a pas encore été validé par les pairs</label>
+        <label><input type="radio" name="q106" value="0"> C. Il est vérifié par Facebook</label>
+        <label><input type="radio" name="q106" value="0"> D. Il est traduit automatiquement</label>
+    </div>
+    <p id="q106_result" class="correction"></p>
+</div>
+
+<!-- Question 107 -->
+<div class="question-card">
+    <p>107. Les biais de confirmation nous poussent à :</p>
+    <div class="options">
+        <label><input type="radio" name="q107" value="0"> A. Oublier l’information</label>
+        <label><input type="radio" name="q107" value="1"> B. Chercher des infos qui confirment nos idées existantes</label>
+        <label><input type="radio" name="q107" value="0"> C. Refuser tous les résultats de recherche</label>
+        <label><input type="radio" name="q107" value="0"> D. Écrire nos propres articles</label>
+    </div>
+    <p id="q107_result" class="correction"></p>
+</div>
+
+<!-- Question 108 -->
+<div class="question-card">
+    <p>108. La « bulle de filtre » désigne :</p>
+    <div class="options">
+        <label><input type="radio" name="q108" value="0"> A. Un pare-feu Internet</label>
+        <label><input type="radio" name="q108" value="1"> B. Un isolement intellectuel lié à la personnalisation des contenus</label>
+        <label><input type="radio" name="q108" value="0"> C. Une option des VPN</label>
+        <label><input type="radio" name="q108" value="0"> D. Une fausse information virale</label>
+    </div>
+    <p id="q108_result" class="correction"></p>
+</div>
+
+<!-- Question 109 -->
+<div class="question-card">
+    <p>109. Le biais de confirmation est renforcé par :</p>
+    <div class="options">
+        <label><input type="radio" name="q109" value="0"> A. La météo</label>
+        <label><input type="radio" name="q109" value="1"> B. Les algorithmes de recommandation</label>
+        <label><input type="radio" name="q109" value="0"> C. Les cryptomonnaies</label>
+        <label><input type="radio" name="q109" value="0"> D. Les antivirus</label>
+    </div>
+    <p id="q109_result" class="correction"></p>
+</div>
+
+<!-- Question 110 -->
+<div class="question-card">
+    <p>110. Une information de qualité dépend :</p>
+    <div class="options">
+        <label><input type="radio" name="q110" value="0"> A. Du moteur de recherche utilisé</label>
+        <label><input type="radio" name="q110" value="1"> B. Du contexte, de l’auteur, et de la source</label>
+        <label><input type="radio" name="q110" value="0"> C. De sa date seulement</label>
+        <label><input type="radio" name="q110" value="0"> D. De sa longueur</label>
+    </div>
+    <p id="q110_result" class="correction"></p>
+</div>
+
+<!-- Question 111 -->
+<div class="question-card">
+    <p>111. Les fake news sur Facebook incluent :</p>
+    <div class="options">
+        <label><input type="radio" name="q111" value="0"> A. Des mises à jour officielles</label>
+        <label><input type="radio" name="q111" value="1"> B. Des fausses pages jouant sur l’émotion pour collecter des "likes"</label>
+        <label><input type="radio" name="q111" value="0"> C. Des documents certifiés</label>
+        <label><input type="radio" name="q111" value="0"> D. Des publications scientifiques</label>
+    </div>
+    <p id="q111_result" class="correction"></p>
+</div>
+
+<!-- Question 112 -->
+<div class="question-card">
+    <p>112. Une page qui demande de “copier-coller pour protéger vos données Facebook” est :</p>
+    <div class="options">
+        <label><input type="radio" name="q112" value="0"> A. Officielle</label>
+        <label><input type="radio" name="q112" value="0"> B. Juridiquement efficace</label>
+        <label><input type="radio" name="q112" value="1"> C. Une arnaque / fausse information</label>
+        <label><input type="radio" name="q112" value="0"> D. Un message de sécurité Facebook</label>
+    </div>
+    <p id="q112_result" class="correction"></p>
+</div>
+
+<!-- Question 113 -->
+<div class="question-card">
+    <p>113. Les sources informelles sont :</p>
+    <div class="options">
+        <label><input type="radio" name="q113" value="0"> A. Les bases de données d’État</label>
+        <label><input type="radio" name="q113" value="1"> B. Les blogs, réseaux sociaux, vidéos YouTube, etc.</label>
+        <label><input type="radio" name="q113" value="0"> C. Les journaux papier uniquement</label>
+        <label><input type="radio" name="q113" value="0"> D. Les documents PDF officiels</label>
+    </div>
+    <p id="q113_result" class="correction"></p>
+</div>
+
+<!-- Question 114 -->
+<div class="question-card">
+    <p>114. Les revues prédatrices :</p>
+    <div class="options">
+        <label><input type="radio" name="q114" value="0"> A. Ont des frais d’impression élevés</label>
+        <label><input type="radio" name="q114" value="1"> B. Acceptent tout article contre paiement, sans vraie relecture</label>
+        <label><input type="radio" name="q114" value="0"> C. Sont uniquement disponibles en anglais</label>
+        <label><input type="radio" name="q114" value="0"> D. Sont interdites en Europe</label>
+    </div>
+    <p id="q114_result" class="correction"></p>
+</div>
+
+<!-- Question 115 -->
+<div class="question-card">
+    <p>115. La fraîcheur de l'information est importante pour :</p>
+    <div class="options">
+        <label><input type="radio" name="q115" value="0"> A. Supprimer les cookies</label>
+        <label><input type="radio" name="q115" value="1"> B. Vérifier que les données sont toujours valables</label>
+        <label><input type="radio" name="q115" value="0"> C. Analyser un virus</label>
+        <label><input type="radio" name="q115" value="0"> D. Choisir une imprimante</label>
+    </div>
+    <p id="q115_result" class="correction"></p>
+</div>
+
+<!-- Question 116 -->
+<div class="question-card">
+    <p>116. Un contenu complotiste utilise souvent :</p>
+    <div class="options">
+        <label><input type="radio" name="q116" value="0"> A. Des données scientifiques sourcées</label>
+        <label><input type="radio" name="q116" value="1"> B. Des sources anonymes, floues et émotionnelles</label>
+        <label><input type="radio" name="q116" value="0"> C. Des vidéos pédagogiques certifiées</label>
+        <label><input type="radio" name="q116" value="0"> D. Des lois officielles</label>
+    </div>
+    <p id="q116_result" class="correction"></p>
+</div>
+
+<!-- Question 117 -->
+<div class="question-card">
+    <p>117. Lors d’une évaluation de site, on vérifie :</p>
+    <div class="options">
+        <label><input type="radio" name="q117" value="0"> A. La couleur du fond</label>
+        <label><input type="radio" name="q117" value="0"> B. Le nombre de GIFs</label>
+        <label><input type="radio" name="q117" value="1"> C. L’auteur, la date, la source et l’objectif</label>
+        <label><input type="radio" name="q117" value="0"> D. Le nombre de “likes”</label>
+    </div>
+    <p id="q117_result" class="correction"></p>
+</div>
+
+<!-- Question 118 -->
+<div class="question-card">
+    <p>118. Un site fiable propose généralement :</p>
+    <div class="options">
+        <label><input type="radio" name="q118" value="0"> A. Des publicités clignotantes</label>
+        <label><input type="radio" name="q118" value="1"> B. Des sources citées, des auteurs identifiés, un contenu structuré</label>
+        <label><input type="radio" name="q118" value="0"> C. Des vidéos en boucle</label>
+        <label><input type="radio" name="q118" value="0"> D. Des commentaires anonymes</label>
+    </div>
+    <p id="q118_result" class="correction"></p>
+</div>
+
+<!-- Question 119 -->
+<div class="question-card">
+    <p>119. Lors d’un débat politique, Wikipédia peut :</p>
+    <div class="options">
+        <label><input type="radio" name="q119" value="0"> A. Publier une vidéo officielle</label>
+        <label><input type="radio" name="q119" value="1"> B. Être modifié par les partisans de chaque camp</label>
+        <label><input type="radio" name="q119" value="0"> C. Être inaccessible par décision politique</label>
+        <label><input type="radio" name="q119" value="0"> D. Remplacer les journaux</label>
+    </div>
+    <p id="q119_result" class="correction"></p>
+</div>
+
+<!-- Question 120 -->
+<div class="question-card">
+    <p>120. Le but d’une veille informationnelle est de :</p>
+    <div class="options">
+        <label><input type="radio" name="q120" value="0"> A. Supprimer des contenus dangereux</label>
+        <label><input type="radio" name="q120" value="1"> B. Se tenir informé de manière efficace dans son domaine</label>
+        <label><input type="radio" name="q120" value="0"> C. Bloquer les cookies</label>
+        <label><input type="radio" name="q120" value="0"> D. Détecter les failles système</label>
+    </div>
+    <p id="q120_result" class="correction"></p>
+</div>
+
+<!-- Question 121 -->
+<div class="question-card">
+    <p>121. Un système de recommandation vise à :</p>
+    <div class="options">
+        <label><input type="radio" name="q121" value="0"> A. Interdire des contenus</label>
+        <label><input type="radio" name="q121" value="1"> B. Proposer du contenu susceptible de plaire à l’utilisateur</label>
+        <label><input type="radio" name="q121" value="0"> C. Écrire des articles automatiquement</label>
+        <label><input type="radio" name="q121" value="0"> D. Supprimer les données inutiles</label>
+    </div>
+    <p id="q121_result" class="correction"></p>
+</div>
+
+<!-- Question 122 -->
+<div class="question-card">
+    <p>122. Un des objectifs des algorithmes de recommandation est :</p>
+    <div class="options">
+        <label><input type="radio" name="q122" value="0"> A. Réduire les publicités</label>
+        <label><input type="radio" name="q122" value="0"> B. Supprimer les messages privés</label>
+        <label><input type="radio" name="q122" value="1"> C. Maintenir l’utilisateur engagé sur la plateforme</label>
+        <label><input type="radio" name="q122" value="0"> D. Traduire les pages Web</label>
+    </div>
+    <p id="q122_result" class="correction"></p>
+</div>
+
+<!-- Question 123 -->
+<div class="question-card">
+    <p>123. Les bulles de filtres peuvent provoquer :</p>
+    <div class="options">
+        <label><input type="radio" name="q123" value="0"> A. Une meilleure sécurité réseau</label>
+        <label><input type="radio" name="q123" value="1"> B. Un isolement intellectuel</label>
+        <label><input type="radio" name="q123" value="0"> C. Une chute des cours de bourse</label>
+        <label><input type="radio" name="q123" value="0"> D. Une hausse de la bande passante</label>
+    </div>
+    <p id="q123_result" class="correction"></p>
+</div>
+
+<!-- Question 124 -->
+<div class="question-card">
+    <p>124. Le biais de confirmation est accentué par :</p>
+    <div class="options">
+        <label><input type="radio" name="q124" value="0"> A. Le Bluetooth</label>
+        <label><input type="radio" name="q124" value="1"> B. Les recommandations personnalisées basées sur les préférences passées</label>
+        <label><input type="radio" name="q124" value="0"> C. Les signatures numériques</label>
+        <label><input type="radio" name="q124" value="0"> D. Les antivirus</label>
+    </div>
+    <p id="q124_result" class="correction"></p>
+</div>
+
+<!-- Question 125 -->
+<div class="question-card">
+    <p>125. DeepFace est un système de :</p>
+    <div class="options">
+        <label><input type="radio" name="q125" value="0"> A. Cryptage des visages</label>
+        <label><input type="radio" name="q125" value="1"> B. Reconnaissance faciale développé par Facebook</label>
+        <label><input type="radio" name="q125" value="0"> C. Filtrage de cookies</label>
+        <label><input type="radio" name="q125" value="0"> D. Contrôle parental</label>
+    </div>
+    <p id="q125_result" class="correction"></p>
+</div>
+
+<!-- Question 126 -->
+<div class="question-card">
+    <p>126. Le deepfake est :</p>
+    <div class="options">
+        <label><input type="radio" name="q126" value="0"> A. Une extension de navigateur</label>
+        <label><input type="radio" name="q126" value="1"> B. Une vidéo falsifiée par intelligence artificielle</label>
+        <label><input type="radio" name="q126" value="0"> C. Un protocole réseau</label>
+        <label><input type="radio" name="q126" value="0"> D. Un outil d’hameçonnage</label>
+    </div>
+    <p id="q126_result" class="correction"></p>
+</div>
+
+<!-- Question 127 -->
+<div class="question-card">
+    <p>127. L’intelligence artificielle (IA) vise à :</p>
+    <div class="options">
+        <label><input type="radio" name="q127" value="0"> A. Supprimer les cookies</label>
+        <label><input type="radio" name="q127" value="1"> B. Réaliser des tâches “intelligentes” par des calculs informatiques</label>
+        <label><input type="radio" name="q127" value="0"> C. Créer des virus</label>
+        <label><input type="radio" name="q127" value="0"> D. Créer des VPN</label>
+    </div>
+    <p id="q127_result" class="correction"></p>
+</div>
+
+<!-- Question 128 -->
+<div class="question-card">
+    <p>128. Le deep learning est :</p>
+    <div class="options">
+        <label><input type="radio" name="q128" value="0"> A. Un jeu vidéo</label>
+        <label><input type="radio" name="q128" value="0"> B. Une méthode de sauvegarde</label>
+        <label><input type="radio" name="q128" value="1"> C. Une technique d’IA basée sur des réseaux de neurones profonds</label>
+        <label><input type="radio" name="q128" value="0"> D. Une fonction d'impression</label>
+    </div>
+    <p id="q128_result" class="correction"></p>
+</div>
+
+<!-- Question 129 -->
+<div class="question-card">
+    <p>129. Les deepfakes posent problème car :</p>
+    <div class="options">
+        <label><input type="radio" name="q129" value="0"> A. Ils ralentissent le Wi-Fi</label>
+        <label><input type="radio" name="q129" value="0"> B. Ils empêchent les mises à jour</label>
+        <label><input type="radio" name="q129" value="1"> C. Ils rendent difficile la distinction entre vrai et faux dans les vidéos</label>
+        <label><input type="radio" name="q129" value="0"> D. Ils bloquent les cookies</label>
+    </div>
+    <p id="q129_result" class="correction"></p>
+</div>
+
+<!-- Question 130 -->
+<div class="question-card">
+    <p>130. Quelle technologie est utilisée dans la reconnaissance faciale ?</p>
+    <div class="options">
+        <label><input type="radio" name="q130" value="0"> A. VPN</label>
+        <label><input type="radio" name="q130" value="1"> B. IA et big data (apprentissage sur grandes bases d’images)</label>
+        <label><input type="radio" name="q130" value="0"> C. SSL</label>
+        <label><input type="radio" name="q130" value="0"> D. Firewall</label>
+    </div>
+    <p id="q130_result" class="correction"></p>
+</div>
+
+<!-- Question 131 -->
+<div class="question-card">
+    <p>131. La reconnaissance faciale peut poser des problèmes :</p>
+    <div class="options">
+        <label><input type="radio" name="q131" value="0"> A. D’humour</label>
+        <label><input type="radio" name="q131" value="0"> B. De traduction</label>
+        <label><input type="radio" name="q131" value="1"> C. D’éthique et de vie privée</label>
+        <label><input type="radio" name="q131" value="0"> D. De bande passante</label>
+    </div>
+    <p id="q131_result" class="correction"></p>
+</div>
+
+<!-- Question 132 -->
+<div class="question-card">
+    <p>132. Le projet VSA (vidéo surveillance algorithmique) en France est lié à :</p>
+    <div class="options">
+        <label><input type="radio" name="q132" value="0"> A. La blockchain</label>
+        <label><input type="radio" name="q132" value="1"> B. L’analyse automatique d’images dans les lieux publics</label>
+        <label><input type="radio" name="q132" value="0"> C. La météo</label>
+        <label><input type="radio" name="q132" value="0"> D. La gestion du RGPD</label>
+    </div>
+    <p id="q132_result" class="correction"></p>
+</div>
+
+<!-- Question 133 -->
+<div class="question-card">
+    <p>133. Quel acteur a influencé le cours du Bitcoin par de simples tweets ?</p>
+    <div class="options">
+        <label><input type="radio" name="q133" value="0"> A. Jeff Bezos</label>
+        <label><input type="radio" name="q133" value="1"> B. Elon Musk</label>
+        <label><input type="radio" name="q133" value="0"> C. Bill Gates</label>
+        <label><input type="radio" name="q133" value="0"> D. Edward Snowden</label>
+    </div>
+    <p id="q133_result" class="correction"></p>
+</div>
+
+<!-- Question 134 -->
+<div class="question-card">
+    <p>134. Un deepfake crédible peut :</p>
+    <div class="options">
+        <label><input type="radio" name="q134" value="0"> A. Avoir une signature numérique vérifiable</label>
+        <label><input type="radio" name="q134" value="0"> B. Être automatiquement bloqué</label>
+        <label><input type="radio" name="q134" value="1"> C. Être pris à tort pour une vraie vidéo</label>
+        <label><input type="radio" name="q134" value="0"> D. Être diffusé uniquement sur le darknet</label>
+    </div>
+    <p id="q134_result" class="correction"></p>
+</div>
+
+<!-- Question 135 -->
+<div class="question-card">
+    <p>135. Une IA peut être entraînée à reconnaître :</p>
+    <div class="options">
+        <label><input type="radio" name="q135" value="0"> A. Seulement des textes</label>
+        <label><input type="radio" name="q135" value="0"> B. Des mots de passe</label>
+        <label><input type="radio" name="q135" value="1"> C. Des visages, des sons, des comportements, etc.</label>
+        <label><input type="radio" name="q135" value="0"> D. Des sauvegardes de fichiers</label>
+    </div>
+    <p id="q135_result" class="correction"></p>
+</div>
+
+<!-- Question 136 -->
+<div class="question-card">
+    <p>136. Quel type de données est essentiel au fonctionnement de l’IA ?</p>
+    <div class="options">
+        <label><input type="radio" name="q136" value="0"> A. Des mots de passe cryptés</label>
+        <label><input type="radio" name="q136" value="0"> B. Des cookies</label>
+        <label><input type="radio" name="q136" value="1"> C. De grandes quantités d’exemples appelées “big data”</label>
+        <label><input type="radio" name="q136" value="0"> D. Des protocoles réseau</label>
+    </div>
+    <p id="q136_result" class="correction"></p>
+</div>
+
+<!-- Question 137 -->
+<div class="question-card">
+    <p>137. Quel danger existe avec des lunettes à réalité augmentée couplées à une IA ?</p>
+    <div class="options">
+        <label><input type="radio" name="q137" value="0"> A. Effacement de données personnelles</label>
+        <label><input type="radio" name="q137" value="1"> B. Collecte automatisée d’informations biométriques</label>
+        <label><input type="radio" name="q137" value="0"> C. Épuisement du réseau</label>
+        <label><input type="radio" name="q137" value="0"> D. Suppression automatique des publications</label>
+    </div>
+    <p id="q137_result" class="correction"></p>
+</div>
+
+<!-- Question 138 -->
+<div class="question-card">
+    <p>138. Quelle IA a été utilisée pour créer des vidéos modifiées d’un TikTokeur américain en Tom Cruise ?</p>
+    <div class="options">
+        <label><input type="radio" name="q138" value="0"> A. Alexa</label>
+        <label><input type="radio" name="q138" value="0"> B. Watson</label>
+        <label><input type="radio" name="q138" value="1"> C. Un deepfake (IA vidéo)</label>
+        <label><input type="radio" name="q138" value="0"> D. Siri</label>
+    </div>
+    <p id="q138_result" class="correction"></p>
+</div>
+
+<!-- Question 139 -->
+<div class="question-card">
+    <p>139. Quel problème pose une IA d’identification faciale non régulée ?</p>
+    <div class="options">
+        <label><input type="radio" name="q139" value="0"> A. Consomme trop de cookies</label>
+        <label><input type="radio" name="q139" value="1"> B. Peut être utilisée à des fins de surveillance massive ou injustifiée</label>
+        <label><input type="radio" name="q139" value="0"> C. Rend les vidéos lentes</label>
+        <label><input type="radio" name="q139" value="0"> D. Empêche de se connecter à Facebook</label>
+    </div>
+    <p id="q139_result" class="correction"></p>
+</div>
+
+<!-- Question 140 -->
+<div class="question-card">
+    <p>140. Une IA de recommandation peut affecter :</p>
+    <div class="options">
+        <label><input type="radio" name="q140" value="0"> A. L’antivirus</label>
+        <label><input type="radio" name="q140" value="1"> B. Le type d'information qu’on reçoit (et donc notre vision du monde)</label>
+        <label><input type="radio" name="q140" value="0"> C. La taille de l’écran</label>
+        <label><input type="radio" name="q140" value="0"> D. La consommation électrique</label>
+    </div>
+    <p id="q140_result" class="correction"></p>
+</div>
+
+<input type="button" value="Vérifier le score Thème 8" onclick="checkScore(01,140,'result8')">
+    <p id="result8"></p>
+</div>
+
+
+<input type="button" value="Réessayer les questions incorrectes" onclick="retryIncorrect()">
+
+<script>
+let lastIncorrect = []; // Stocke les questions incorrectes
+
+function showTheme(num){
+    const themes = document.querySelectorAll(".theme");
+    themes.forEach(t => t.style.display = "none");
+    const theme = document.querySelector(".theme" + num);
+    if(theme){
+        theme.style.display = "block";
+        document.getElementById("qcmForm").style.display = "block";
+        theme.scrollIntoView({behavior:"smooth"});
+    }
+}
+
+function checkScore(start, end, resultId){
+    let total = 0;
+    lastIncorrect = [];
+    for(let i = start; i <= end; i++){
+        const radios = document.getElementsByName("q" + i);
+        let answered = false;
+        let correction = "";
+
+        Array.from(radios).forEach(r => r.parentElement.classList.remove("correct","incorrect"));
+
+        Array.from(radios).forEach(r => {
+            if(r.checked){
+                answered = true;
+                if(r.value === "1"){
+                    total++;
+                    correction = "✅ Correct";
+                    r.parentElement.classList.add("correct");
+                } else {
+                    correction = "❌ Incorrect (bonne réponse en vert)";
+                    r.parentElement.classList.add("incorrect");
+                    Array.from(radios).forEach(r2 => { if(r2.value==="1") r2.parentElement.classList.add("correct"); });
+                    lastIncorrect.push(i);
+                }
+            }
+        });
+
+        if(!answered){
+            correction = "❌ Pas de réponse (bonne réponse en vert)";
+            Array.from(radios).forEach(r2 => { if(r2.value==="1") r2.parentElement.classList.add("correct"); });
+            lastIncorrect.push(i);
+        }
+
+        const resEl = document.getElementById("q" + i + "_result");
+        if(resEl) resEl.textContent = correction;
+    }
+
+    const scoreEl = document.getElementById(resultId);
+    scoreEl.textContent = "Score : " + total + " / " + (end-start+1);
+
+    const pourcentage = total / (end-start+1) * 100;
+    let message = "";
+    if(pourcentage >= 90) message = "T'y est bonnn";
+    else if(pourcentage >= 50) message = "Ouais pas malll";
+    else message = "Eclaté au sol";
+    scoreEl.textContent += " — " + message;
+}
+
+function retryIncorrect(){
+    if(lastIncorrect.length === 0){
+        alert("Aucune question incorrecte à réessayer !");
+        return;
+    }
+
+    // On cache tous les thèmes
+    document.querySelectorAll(".theme").forEach(t => t.style.display="none");
+
+    // On affiche uniquement les questions incorrectes et leur thème
+    lastIncorrect.forEach(qNum => {
+        const question = document.getElementById("q" + qNum + "_result").parentElement;
+        question.style.display = "block";
+
+        // On réaffiche le thème correspondant
+        let parentTheme = question.closest(".theme");
+        if(parentTheme) parentTheme.style.display = "block";
+
+        // On réinitialise les réponses
+        const radios = document.getElementsByName("q" + qNum);
+        Array.from(radios).forEach(r => { r.checked = false; r.parentElement.classList.remove("correct","incorrect"); });
+
+        // On supprime le message précédent
+        const resEl = document.getElementById("q" + qNum + "_result");
+        if(resEl) resEl.textContent = "";
+    });
+
+    // On vide le tableau après avoir relancé le retry
+    lastIncorrect = [];
+}
+</script>
